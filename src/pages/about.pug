@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    +header
+    .page.about-page
+      .wrapper
+        h1.section-header Out company
+        p.about-page__text Soshace is a web development studio. We design and build web apps for various online businesses. JavaScript / Node.js development is our major specialization, where we are among the best. We generally work with startups and digital agencies from the US, Australia, the UK. We absolutely love big and complex projects and do only those things we are capable to do.
+        +about-numbers
+        +section-link('history.html', 'See company history')
+        +team
+    +feedback
+    +contacts
+    +footer
+    include ../templates/scripts.pug

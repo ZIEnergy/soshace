@@ -1,0 +1,14 @@
+mixin portfolio(additionalClass)
+  .portfolio.section(class=additionalClass)
+    .wrapper
+      ul.portfolio-list
+        +portfolio-item('portfolio-1.jpg')
+        +portfolio-item('portfolio-2.jpg')
+        +portfolio-item('portfolio-3.jpg')
+        +portfolio-item('portfolio-4.jpg')
+        +portfolio-item('portfolio-5.jpg')
+        +portfolio-item('portfolio-6.jpg')
+        +portfolio-item('portfolio-7.jpg')
+        +portfolio-item('portfolio-8.jpg')
+        +portfolio-item('portfolio-9.jpg')
+      +section-link('portfolio.html', 'View all projects')

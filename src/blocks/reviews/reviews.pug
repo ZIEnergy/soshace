@@ -1,0 +1,7 @@
+mixin reviews(additionalClass)
+  .reviews.section(class=additionalClass)
+    .wrapper
+      h2.section-header Client reviews
+      .slider.reviews__content
+        +review-item
+      +section-link('reviews.html', 'View all 90 reviews')

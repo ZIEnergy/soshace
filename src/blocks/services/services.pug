@@ -1,0 +1,12 @@
+mixin services(additionalClass)
+  .services.section(class=additionalClass)
+    .wrapper
+      h2.section-header Services
+      ul.services__list
+        li.services__item Server programming
+        li.services__item Adaptive coding 
+        li.services__item Client programming 
+        li.services__item Web apps development 
+        li.services__item Development of web app prototypes 
+        li.services__item Leased developer
+      +section-link('services.html', 'More on services')

@@ -1,0 +1,18 @@
+mixin review-item(additionalClass)
+  .review-item(class=additionalClass)
+    img.review__author-photo(src="img/review-item.jpg", alt="Photo")
+    .review-item__content
+      .review-item__info
+        .review-item__date.review-item__info-text May 2016 - Jun 2016
+        .review-item__info-item
+          a.review-item__info-header.review-item__subject(href="#") Furtivelook.com
+          .review-item__info-text – a dating app 
+        .review-item__info-item
+          .review-item__info-header Client:
+          .review-item__info-text Jérôme Siau
+        .review-item__info-item
+          .review-item__info-header Service Provider:
+          .review-item__info-text Vitaly Zhukov
+      +stars('full', 'full', 'full', 'full', 'empty')
+      p.review-item__dscr Vitalii is a top developper on javascript framework (meteor + react). Thx for your hard work Vitalii!
+      .review-item__link Details

@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    +header
+    .page.careers
+      .wrapper
+        h1.section-header Careers
+        h2.careers__subheader We are looking for:
+        ul.careers__vacancies
+          +vacancy('developer', 'Junior / Middle Front-end Developer')
+          +vacancy('developer', 'Junior / Middle Front-end Developer')
+          +vacancy('tester', 'Tester')
+          +vacancy('manager', 'Manager')
+          +vacancy('editor', 'Editor')
+    +feedback
+    +contacts
+    +footer
+    include ../templates/scripts.pug

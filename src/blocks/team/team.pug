@@ -1,0 +1,16 @@
+mixin team(additionalClass)
+  .team(class=additionalClass)
+    h2.section-header Our team
+    p.team__dscr Our team is our primary advantage. We don’t have outsiders. Each of us has passed a probation and is capable and experienced in his skills.
+    ul.team__list
+      li.team__new
+        .team__new-number +1
+        .team__new-dscr Become out team member!
+      +teammate('teammate-1.jpg', 'Denis Nefedov', 'Full Stack Developer')
+      +teammate('teammate-2.jpg', 'Vitaly Zhukov', 'Full Stack JS Developer')
+      +teammate('teammate-3.jpg', 'Albert Shakirov', 'Front-end Developer')
+      +teammate('teammate-4.jpg', 'Stepan Zharychev', 'Full Stack Developer')
+      +teammate('teammate-5.jpg', 'Andrey Medvedev', 'Full Stack JS Developer')
+      +teammate('teammate-6.jpg', 'Pavel Bragin', 'Full Stack JS Developer, Co-Founder')
+      +teammate('teammate-7.jpg', 'Nikita Bragin', 'Full Stack JS Developer, Founder')
+      +teammate('teammate-8.jpg', 'Ivan Rastvorov', 'Project Manager')
