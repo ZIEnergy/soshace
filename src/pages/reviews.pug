@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    +header
+    .page.reviews-page
+      .wrapper
+        h1.section-header Client reviews
+        +review-item
+        +review-item
+        +review-item
+    +feedback
+    +contacts
+    +footer
+    include ../templates/scripts.pug

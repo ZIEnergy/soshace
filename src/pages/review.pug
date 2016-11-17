@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    +header
+    .page.review
+      .wrapper
+        a.link-back(href="reviews.html") Back to Reviews
+        +review-item
+        img.review__screenshot(src="img/project-1.jpg", alt="Furtivelook")
+    +feedback
+    +contacts
+    +footer
+    include ../templates/scripts.pug
