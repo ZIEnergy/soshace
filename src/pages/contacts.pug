@@ -7,7 +7,8 @@ html(lang='en')
     +header
     .page.contacts-page
       .map
-        +contacts-content('map__contacts', 'contacts-content--white')
+        .wrapper
+          +contacts-content('map__contacts', 'contacts-content--white')
     +feedback
     +footer
     include ../templates/scripts.pug

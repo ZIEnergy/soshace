@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    +header
+    .page.employee
+      .wrapper
+        h1.section-header Stepan Zharychev
+        h2.section-subheader
+        .employee__content
+          img.employee__photo(src="img/employee-1.jpg", alt="Stepam Zharychev")
+          p.employee__dscr Over 4 years of developing experience. Stepan is a bachelor of software development. He works with JavaScript, in particular – with MEAN Stack, React and D3. Stepan participated in building complex web apps, CRM systems and extensions to them, plugins for Google Chrome, etc. Fluent in English.
+        h2.sectiob-subheader Portfolio
+          .portfolio-list
+            +portfolio-item
+            +portfolio-item
+            +portfolio-item
+            +portfolio-item
+            +portfolio-item
+            +portfolio-item
+    +feedback
+    +contacts
+    +footer
+    include ../templates/scripts.pug
