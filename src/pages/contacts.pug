@@ -1,0 +1,13 @@
+doctype html
+html(lang='en')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    +header
+    .page.contacts-page
+      .map
+        +contacts-content('map__contacts', 'contacts-content--white')
+    +feedback
+    +footer
+    include ../templates/scripts.pug
