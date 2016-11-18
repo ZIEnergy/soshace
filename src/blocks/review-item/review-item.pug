@@ -1,18 +1,105 @@
-mixin review-item(additionalClass)
+mixin review-item(photo, date, project, projectLink, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
   .review-item(class=additionalClass)
-    img.review__author-photo(src="img/review-item.jpg", alt="Photo")
+    img.review__author-photo(src="img/"+photo, alt="Photo")
     .review-item__content
       .review-item__info
-        .review-item__date.review-item__info-text May 2016 - Jun 2016
+        .review-item__date.review-item__info-text #{date}
         .review-item__info-item
-          a.review-item__info-header.review-item__subject(href="#") Furtivelook.com
-          .review-item__info-text – a dating app 
+          a.review-item__info-header.review-item__subject(href=projectLink) #{project}
+          .review-item__info-text #{projectStage}
         .review-item__info-item
           .review-item__info-header Client:
-          .review-item__info-text Jérôme Siau
+          .review-item__info-text #{client}
         .review-item__info-item
           .review-item__info-header Service Provider:
-          .review-item__info-text Vitaly Zhukov
-      +stars('full', 'full', 'full', 'full', 'empty')
-      p.review-item__dscr Vitalii is a top developper on javascript framework (meteor + react). Thx for your hard work Vitalii!
-      .review-item__link Details
+          .review-item__info-text #{employee}
+      .review-item__evaluation
+        +stars(star1, star2, star3, star4, star5)
+        .review-item__rating #{rating}
+      p.review-item__dscr #{reviewContent}
+      a.review-item__link(href="#") Details
+      
+mixin review-item--nolink(photo, date, project, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
+  .review-item(class=additionalClass)
+    img.review__author-photo(src="img/"+photo, alt="Photo")
+    .review-item__content
+      .review-item__info
+        .review-item__date.review-item__info-text #{date}
+        .review-item__info-item
+          .review-item__info-header.review-item__subject #{project}
+        .review-item__info-item
+          .review-item__info-header Client:
+          .review-item__info-text #{client}
+        .review-item__info-item
+          .review-item__info-header Service Provider:
+          .review-item__info-text #{employee}
+      .review-item__evaluation
+        +stars(star1, star2, star3, star4, star5)
+        .review-item__rating #{rating}
+      p.review-item__dscr #{reviewContent}
+      a.review-item__link(href="#") Details
+      
+mixin review-item--nophoto(date, project, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
+  .review-item(class=additionalClass)
+    .review-item__content
+      .review-item__info
+        .review-item__date.review-item__info-text #{date}
+        .review-item__info-item
+          .review-item__info-header.review-item__subject #{project}
+        .review-item__info-item
+          .review-item__info-header Client:
+          .review-item__info-text #{client}
+        .review-item__info-item
+          .review-item__info-header Service Provider:
+          .review-item__info-text #{employee}
+      .review-item__evaluation
+        +stars(star1, star2, star3, star4, star5)
+        .review-item__rating #{rating}
+      p.review-item__dscr #{reviewContent}
+      a.review-item__link(href="#") Details
+      
+mixin review-item--detailed(photo, date, project, projectLink, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
+    .review-item(class=additionalClass)
+      img.review__author-photo(src="img/"+photo, alt="Photo")
+      .review-item__content
+        .review-item__content-top
+          .review-item__info
+            .review-item__date.review-item__info-text #{date}
+            .review-item__info-item
+              a.review-item__info-header.review-item__subject(href=projectLink) #{project}
+              .review-item__info-text #{projectStage}
+            .review-item__info-item
+              .review-item__info-header Client:
+              .review-item__info-text #{client}
+            .review-item__info-item
+              .review-item__info-header Service Provider:
+              .review-item__info-text #{employee}
+          .review-item__project-price 
+            .review-item__project-price-content $1,000.00 earned
+            .review-item__project-price-type Fixed Price
+        .review-item__content-bottom
+          .review-item__content-subject
+            .review-item__evaluation
+              +stars(star1, star2, star3, star4, star5)
+              .review-item__rating #{rating}
+            p.review-item__dscr #{reviewContent}
+            a.review-item__link(href="#") Details
+          ul.review-item__rating-details
+            li.review-item__rating-details-item 
+              .review-item__rating-details-header Skills
+              .review-item__rating-details-content 5.0     
+            li.review-item__rating-details-item 
+              .review-item__rating-details-header Quality
+              .review-item__rating-details-content 5.0      
+            li.review-item__rating-details-item 
+              .review-item__rating-details-header Availability
+              .review-item__rating-details-content 5.0      
+            li.review-item__rating-details-item 
+              .review-item__rating-details-header Deadlines
+              .review-item__rating-details-content 5.0      
+            li.review-item__rating-details-item 
+              .review-item__rating-details-header Communication
+              .review-item__rating-details-content 5.0      
+            li.review-item__rating-details-item 
+              .review-item__rating-details-header Cooperation
+              .review-item__rating-details-content 5.0             
