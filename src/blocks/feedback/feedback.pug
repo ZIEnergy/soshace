@@ -3,11 +3,4 @@ mixin feedback(additionalClass)
     .wrapper
       h2.section-header Feedback form
       p.feedback__dscr Submit your request, and we will negotiate your project details: offer solutions, calculate the cost and specify the deadline.
-      form.feedback__form(action="#", method="post")
-        input.input(type="text", placeholder="Name", name="name")
-        input.input(type="email", placeholder="E-mail", name="email")
-        textarea.input--textarea(type="text", placeholder="Message", name="message")
-        .form__upload
-          .form__upload-icon.form__upload-icon--clip
-          .form__upload-text max 10Mb
-        button.button Discus a project
+      +form('feedback__form')

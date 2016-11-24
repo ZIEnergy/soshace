@@ -14,7 +14,7 @@ mixin review-item(photo, date, project, projectLink, projectStage, client, emplo
           .review-item__info-header Service Provider:
           .review-item__info-text #{employee}
       .review-item__evaluation
-        +stars(star1, star2, star3, star4, star5)
+        +stars(star1, star2, star3, star4, star5, 'review-item__stars')
         .review-item__rating #{rating}
       p.review-item__dscr #{reviewContent}
       a.review-item__link(href="#") Details
@@ -34,7 +34,7 @@ mixin review-item--nolink(photo, date, project, projectStage, client, employee, 
           .review-item__info-header Service Provider:
           .review-item__info-text #{employee}
       .review-item__evaluation
-        +stars(star1, star2, star3, star4, star5)
+        +stars(star1, star2, star3, star4, star5, 'review-item__stars')
         .review-item__rating #{rating}
       p.review-item__dscr #{reviewContent}
       a.review-item__link(href="#") Details
@@ -53,7 +53,7 @@ mixin review-item--nophoto(date, project, projectStage, client, employee, star1,
           .review-item__info-header Service Provider:
           .review-item__info-text #{employee}
       .review-item__evaluation
-        +stars(star1, star2, star3, star4, star5)
+        +stars(star1, star2, star3, star4, star5, 'review-item__stars')
         .review-item__rating #{rating}
       p.review-item__dscr #{reviewContent}
       a.review-item__link(href="#") Details
@@ -80,7 +80,7 @@ mixin review-item--detailed(photo, date, project, projectLink, projectStage, cli
         .review-item__content-bottom
           .review-item__content-subject
             .review-item__evaluation
-              +stars(star1, star2, star3, star4, star5)
+              +stars(star1, star2, star3, star4, star5, 'review-item__stars')
               .review-item__rating #{rating}
             p.review-item__dscr #{reviewContent}
             a.review-item__link(href="#") Details

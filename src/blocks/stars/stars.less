@@ -1,3 +1,19 @@
 .stars {
+  display: flex;
+  align-items: center;
   
+  &__item {
+    width: 2.1rem;
+    height: 1.9rem;
+    
+    &--full {
+      background: url(../img/star-full.png) no-repeat;
+      background-size: cover;
+    }
+    
+    &--empty {
+      background: url(../img/star-empty.png) no-repeat;
+      background-size: cover;
+    }
+  }
 }

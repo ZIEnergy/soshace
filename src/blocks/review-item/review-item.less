@@ -26,20 +26,24 @@
   &__info-item {
     font-family: @font-first;
     font-size: 1.8rem;
+    display: flex;
+    align-items: center;
   }
   
   &__info-header {
-    
+    margin-right: .5rem;
   }
   
   &__subject {
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: underline;
+    color: #000;
+    display: block;
   }
   
   &__info-text {
-    
+    line-height: 2.8rem;
   }
   
   &__evaluation {
@@ -50,11 +54,22 @@
     
   }
   
+  &__stars {
+    margin: 2rem 0 1.4rem;
+  }
+  
   &__dscr {
-    
+    font-family: @font-first;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 3.2rem;
   }
   
   &__link {
-    
+    font-family: @font-first;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    color: #000;
+    display: block;
   }
 }

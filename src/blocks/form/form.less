@@ -1,3 +1,34 @@
 .form {
+  position: relative;
   
+  &__input {
+    
+    &:nth-child(n+2) {
+      margin-top: 1.9rem;
+    }
+  }
+  
+  &__button {
+    margin: 6rem auto 0;
+  }
+  
+  &__upload {
+    position: absolute;
+    right: -9.5rem;
+    bottom: 11.4rem;
+  }
+  
+  &__upload-icon {
+    width: 2rem;
+    height: 4.9rem;
+    background: url(../img/clip.png) no-repeat;
+    background-size: cover;
+  }
+  
+  &__upload-text {
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: @font-first;
+    margin-top: .6rem;
+  }
 }
