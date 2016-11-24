@@ -1,3 +1,80 @@
 .technologies {
+  background: @color-second;
   
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 9.6rem;
+  }
+  
+  &__item {
+    color: #fff;
+    font-family: @font-first;
+    font-size: 2.2rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    width: 33%;
+    min-height: 11.2rem;
+    
+    &:nth-child(n+4) {
+      margin-top: 10rem;
+    }
+    
+    &:before {
+      content: '';
+      display: block;
+      width: 14rem;
+      height: 11.2rem;
+    }
+    
+    &--angular {
+      
+      &:before {
+        background: url(../img/tech-angular.png) no-repeat;;
+      }
+    }
+    
+    &--react {
+      
+      &:before {
+        background: url(../img/tech-react.png) no-repeat;
+        background-position: left center;
+      }
+    }
+    
+    &--d3 {
+      
+      &:before {
+        background: url(../img/tech-d3.png) no-repeat;
+        background-position: left center;
+      }
+    }
+    
+    &--meteor {
+      
+      &:before {
+        width: 22.4rem;
+        background: url(../img/tech-meteor.png) no-repeat;
+        background-position: left center;
+      }
+    }
+    
+    &--html {
+      
+      &:before {
+        background: url(../img/tech-html.png) no-repeat;
+        background-position: left center;
+      }
+    }
+    
+    &--css {
+      
+      &:before {
+        background: url(../img/tech-css.png) no-repeat;
+        background-position: left center;
+      }
+    }
+  }
 }

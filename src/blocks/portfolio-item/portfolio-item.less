@@ -1,3 +1,51 @@
 .portfolio-item {
+  position: relative;
   
+  &__picture {
+    
+  }
+  
+  &__info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1.5rem 1.7rem;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(36,120,222, .9);
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+  &__info-top {
+    
+  }
+  
+  &__title {
+    font-family: @font-first;
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  &__dscr {
+    font-family: @font-first;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.8rem;
+  }
+  
+  &__link {
+    color: #fff;
+    font-family: @font-first;
+    font-size: 1.6rem;
+    display: block;
+  }
 }

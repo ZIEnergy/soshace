@@ -1,3 +1,18 @@
 .menu {
+  display: flex;
+  align-items: center;
   
+  &__item {
+    font-size: 1.8rem;
+    font-family: @font-first;
+    font-weight: 300;
+    text-transform: uppercase;
+    opacity: .77;
+    color: #fff;
+    text-decoration: none;
+    
+    &:nth-child(n+2) {
+      margin-left: 2rem;
+    }
+  }
 }
