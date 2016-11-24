@@ -1,3 +1,47 @@
 .teammate {
+  position: relative;
+  width: 26.1rem;
+  height: 26.1rem;
   
+  &:nth-child(n+4) {
+    margin-top: 9rem;
+  }
+  
+  &:nth-child(n+2) {
+    margin-left: 5rem;
+  }
+  
+  &:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  
+  &__picture {
+    
+  }
+  
+  &__content {
+    width: 100%;
+    background: rgba(29,41,56, .9);
+    height: 10.1rem;
+    padding: 1rem .9rem;
+    position: absolute;
+    bottom: -.9rem;
+    left: -.9rem;
+  }
+  
+  &__name {
+    color: #fff;
+    font-size: 2.2rem;
+    font-family: @font-first;
+    text-transform: uppercase;
+  }
+  
+  &__occupation {
+    margin-top: 1.2rem;
+    font-family: @font-first;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+  }
 }

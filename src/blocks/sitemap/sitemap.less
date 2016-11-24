@@ -1,3 +1,18 @@
 .sitemap {
+  display: flex;
   
+  &__item {
+    
+    &:nth-child(n+2) {
+      margin-left: 2rem;
+    }
+  }
+  
+  &__link {
+    font-family: @font-first;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+  }
 }
