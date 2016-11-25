@@ -1,0 +1,76 @@
+.services-page {
+  padding: 8rem 0 16rem;
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8.9rem;
+  }
+  
+  &__item {
+    max-width: 34rem;
+    margin-left: 8rem;
+    
+    &:nth-child(3n+1) {
+      margin-left: 0;
+    }
+    
+    &:nth-child(n+4) {
+      margin-top: 8rem;
+    }
+  }
+  
+  &__item-icon {
+    width: 10rem;
+    height: 12.7rem;
+    
+    &--server {
+      background: url(../img/service-1.png) no-repeat;
+      background-position: left bottom;
+    }
+    
+    &--adaptive {
+      background: url(../img/service-2.png) no-repeat;
+      background-position: left bottom;
+    }
+    
+    &--client {
+      background: url(../img/service-3.png) no-repeat;
+      background-position: left bottom;
+    }
+    
+    &--web {
+      background: url(../img/service-4.png) no-repeat;
+      background-position: left bottom;
+    }
+    
+    &--prototype {
+      background: url(../img/service-5.png) no-repeat;
+      background-position: left bottom;
+    }
+    
+    &--dedicated {
+      background: url(../img/service-6.png) no-repeat;
+      background-position: left bottom;
+    }
+  }
+  
+  &__item-name {
+    margin: 2rem 0 1rem;
+    font-size: 2.2rem;
+    font-family: @font-first;
+    font-weight: 300;
+    line-height: 3.2rem;
+  }
+  
+  &__item-content {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.8rem;
+    font-family: @font-first;
+  }
+  
+  &__item-link {
+    color: #000;
+  }
+}
