@@ -1,7 +1,9 @@
 mixin reviews(additionalClass)
-  .reviews.section(class=additionalClass)
+  .reviews.section#reviews(class=additionalClass)
     .wrapper
       h2.section-header.section-header--black Client reviews
       .slider.reviews__content
         +review-item('client-1.jpg', 'May 2016 - Jun 2016', 'furtivelook.com', '#', '— a dating app', 'Jérôme Siau', 'Vitaly Zhukov', 'full', 'full', 'full', 'full', 'empty', '', 'Vitalii is a top developer on javascript framework (meteor + react). Thx for your hard work Vitalii!')
+        +review-item('client-2.jpg', 'May 2016 - Jun 2016', 'furtivelook.com', '#', '— a dating app', 'Jérôme Siau', 'Vitaly Zhukov', 'full', 'full', 'full', 'full', 'empty', '', 'Vitalii is a top developer on javascript framework (meteor + react). Thx for your hard work Vitalii!')
+        +review-item('client-3.jpg', 'May 2016 - Jun 2016', 'furtivelook.com', '#', '— a dating app', 'Jérôme Siau', 'Vitaly Zhukov', 'full', 'full', 'full', 'full', 'empty', '', 'Vitalii is a top developer on javascript framework (meteor + react). Thx for your hard work Vitalii!')
       +section-link('reviews.html', 'View all 90 reviews')

@@ -4,3 +4,10 @@ mixin header(additionalClass)
       +logo
       +menu
       +button('button--small')
+      
+mixin header--inner(additionalClass)
+  .header(class=additionalClass)
+    .wrapper.header__wrapper
+      +logo
+      +menu
+      +button('button--small')
