@@ -1,6 +1,6 @@
 mixin review-item(photo, date, project, projectLink, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
   .review-item(class=additionalClass)
-    img.review__author-photo(src="img/"+photo, alt="Photo")
+    img.review-item__author-photo(src="img/"+photo, alt="Photo")
     .review-item__content
       .review-item__info
         .review-item__date.review-item__info-text #{date}
@@ -19,14 +19,14 @@ mixin review-item(photo, date, project, projectLink, projectStage, client, emplo
       p.review-item__dscr #{reviewContent}
       a.review-item__link(href="#") Details
       
-mixin review-item--nolink(photo, date, project, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
+mixin review-item--nolink(photo, date, project, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
   .review-item(class=additionalClass)
-    img.review__author-photo(src="img/"+photo, alt="Photo")
+    img.review-item__author-photo(src="img/"+photo, alt="Photo")
     .review-item__content
       .review-item__info
         .review-item__date.review-item__info-text #{date}
         .review-item__info-item
-          .review-item__info-header.review-item__subject #{project}
+          .review-item__info-header #{project}
         .review-item__info-item
           .review-item__info-header Client:
           .review-item__info-text #{client}
@@ -39,13 +39,13 @@ mixin review-item--nolink(photo, date, project, projectStage, client, employee, 
       p.review-item__dscr #{reviewContent}
       a.review-item__link(href="#") Details
       
-mixin review-item--nophoto(date, project, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
-  .review-item(class=additionalClass)
+mixin review-item--nophoto(date, project, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
+  .review-item.review-item--nophoto(class=additionalClass)
     .review-item__content
       .review-item__info
         .review-item__date.review-item__info-text #{date}
         .review-item__info-item
-          .review-item__info-header.review-item__subject #{project}
+          .review-item__info-header #{project}
         .review-item__info-item
           .review-item__info-header Client:
           .review-item__info-text #{client}
@@ -60,7 +60,7 @@ mixin review-item--nophoto(date, project, projectStage, client, employee, star1,
       
 mixin review-item--detailed(photo, date, project, projectLink, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
     .review-item(class=additionalClass)
-      img.review__author-photo(src="img/"+photo, alt="Photo")
+      img.review-item__author-photo(src="img/"+photo, alt="Photo")
       .review-item__content
         .review-item__content-top
           .review-item__info

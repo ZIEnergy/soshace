@@ -1,3 +1,102 @@
 .project {
+  padding-bottom: 11.4rem;
   
+  &__content {
+    margin-top: 9rem;
+  }
+  
+  &__content-item {
+    
+    &:nth-child(n+2) {
+      margin-top: 2rem;
+    }
+  }
+  
+  &__content-header {
+    font-size: 2.2rem;
+    font-family: @font-first;
+    margin-bottom: 1rem;
+  }
+  
+  &__content-text {
+    font-size: 1.8rem;
+    font-family: @font-first;
+    line-height: 2.8rem;
+    font-weight: 300;
+  }
+  
+  &__content-item {
+    
+  }
+  
+  &__list-ordered {
+    
+  }
+  
+  &__list-ordered-item {
+    
+  }
+  
+  &__technologies {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__technologies-item {
+    
+    &:nth-child(n+2) {
+      margin-left: 2.5rem;
+    }
+    
+    &--meteor {
+      background: url(../img/project-meteor.png) no-repeat;
+      background-size: cover;
+      width: 12.6rem;
+      height: 3rem;
+    }
+    
+    &--react {
+      background: url(../img/project-react.png) no-repeat;
+      background-size: cover;
+      width: 5.6rem;
+      height: 5rem;
+    }
+    
+    &--google {
+      background: url(../img/project-google.png) no-repeat;
+      background-size: cover;
+      width: 5.8rem;
+      height: 3.6rem;
+    }
+    
+    &--facebook {
+      background: url(../img/project-facebook.png) no-repeat;
+      background-size: cover;
+      width: 21.8rem;
+      height: 2.4rem;
+    }
+    
+    &--maps {
+      background: url(../img/project-maps.png) no-repeat;
+      background-size: cover;
+      width: 4.3rem;
+      height: 4.1rem;
+    }
+    
+    &--ecma {
+      background: url(../img/project-ecma.png) no-repeat;
+      background-size: cover;
+      width: 11.2rem;
+      height: 3rem;
+    }
+  }
+  
+  &__screenshot {
+    margin-top: 7rem;
+    margin-bottom: 6rem;
+  }
+  
+  &__reviews {
+    margin-top: 5.5rem;
+  }
 }

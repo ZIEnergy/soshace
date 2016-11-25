@@ -1,12 +1,20 @@
 .review-item {
   display: flex;
+  align-items: flex-start;
+  
+  &:nth-child(n+2) {
+    margin-top: 6rem;
+    padding-top: 7.5rem;
+    border-top: 1px solid #e6e6e6;
+  }
   
   &__author-photo {
-    
+    display: block;
+    margin-right: 4rem;
   }
   
   &__content {
-    margin-left: 4rem;
+    
   }
   
   &__info {
@@ -28,6 +36,10 @@
     font-size: 1.8rem;
     display: flex;
     align-items: center;
+    
+    &:nth-child(n+2) {
+      margin-top: .5rem;
+    }
   }
   
   &__info-header {
@@ -37,7 +49,6 @@
   &__subject {
     font-weight: 400;
     text-transform: uppercase;
-    text-decoration: underline;
     color: #000;
     display: block;
   }
@@ -47,15 +58,20 @@
   }
   
   &__evaluation {
-    
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 1.4rem;
   }
   
   &__rating {
-    
+    font-size: 1.8rem;
+    font-family: @font-first;
+    font-weight: 300;
+    margin-left: 2.2rem;
   }
   
   &__stars {
-    margin: 2rem 0 1.4rem;
+    
   }
   
   &__dscr {
@@ -63,6 +79,7 @@
     font-size: 2.2rem;
     font-weight: 300;
     line-height: 3.2rem;
+    max-width: 65rem;
   }
   
   &__link {
@@ -71,5 +88,9 @@
     margin-top: 1.5rem;
     color: #000;
     display: block;
+  }
+  
+  &--nophoto {
+    margin-left: 28rem;
   }
 }
