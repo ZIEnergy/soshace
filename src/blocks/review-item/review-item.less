@@ -14,7 +14,7 @@
   }
   
   &__content {
-    
+    width: 100%;
   }
   
   &__info {
@@ -80,6 +80,10 @@
     font-weight: 300;
     line-height: 3.2rem;
     max-width: 65rem;
+    
+    &--short {
+      width: 48rem;
+    }
   }
   
   &__link {
@@ -92,5 +96,62 @@
   
   &--nophoto {
     margin-left: 28rem;
+  }
+  
+  &__content-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  &__content-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  &__project-price {
+    width: 16rem;
+  }
+  
+  &__project-price-content {
+    font-size: 1.8rem;
+    font-family: @font-first;
+    font-weight: 300;
+    line-height: 2.8rem;
+  }
+  
+  &__project-price-type {
+    font-size: 1.8rem;
+    font-family: @font-first;
+    font-weight: 300;
+    line-height: 2.8rem;
+  }
+  
+  &__rating-details {
+    width: 16rem;
+  }
+  
+  &__rating-details-item {
+    display: flex;
+  }
+  
+  &__rating-details-header {
+    font-size: 1.8rem;
+    font-family: @font-first;
+    font-weight: 300;
+    line-height: 2.8rem;
+  }
+  
+  &__rating-details-content {
+    font-size: 1.8rem;
+    font-family: @font-first;
+    font-weight: 300;
+    margin-left: .5rem;
+    line-height: 2.8rem;
+  }
+  
+  &--detailed {
+    width: 104rem;
   }
 }

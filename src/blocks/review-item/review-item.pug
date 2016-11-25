@@ -59,7 +59,7 @@ mixin review-item--nophoto(date, project, client, employee, star1, star2, star3,
       a.review-item__link(href="#") Details
       
 mixin review-item--detailed(photo, date, project, projectLink, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass)
-    .review-item(class=additionalClass)
+    .review-item.review-item--detailed(class=additionalClass)
       img.review-item__author-photo(src="img/"+photo, alt="Photo")
       .review-item__content
         .review-item__content-top
@@ -82,7 +82,7 @@ mixin review-item--detailed(photo, date, project, projectLink, projectStage, cli
             .review-item__evaluation
               +stars(star1, star2, star3, star4, star5, 'review-item__stars')
               .review-item__rating #{rating}
-            p.review-item__dscr #{reviewContent}
+            p.review-item__dscr.review-item__dscr--short #{reviewContent}
             a.review-item__link(href="#") Details
           ul.review-item__rating-details
             li.review-item__rating-details-item 
