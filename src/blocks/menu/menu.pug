@@ -1,20 +1,11 @@
 mixin menu(additionalClass)
   .menu(class=additionalClass)
-    a.menu__item(href="#services") Services
-    a.menu__item(href="#technologies") Technologies
-    a.menu__item(href="#portfolio") Portfolio
-    a.menu__item(href="#about") About Us
-    a.menu__item(href="#reviews") Reviews
-    a.menu__item(href="#contacts") Contact
-    a.menu__item(href="http://blog.soshace.com/ru/") Blog
-    
-    
-mixin menu--inner(additionalClass)
-  .menu(class=additionalClass)
-    a.menu__item(href="services.html") Services
-    a.menu__item(href="technologies.html") Technologies
-    a.menu__item(href="portfolio.html") Portfolio
-    a.menu__item(href="about.html") About Us
-    a.menu__item(href="reviews.html") Reviews
-    a.menu__item(href="contacts.html") Contact
-    a.menu__item(href="http://blog.soshace.com/ru/") Blog
+    a.menu__button(href="#")
+    .menu__links
+      a.menu__item(href="services.html") Services
+      a.menu__item(href="technologies.html") Technologies
+      a.menu__item(href="portfolio.html") Portfolio
+      a.menu__item(href="about.html") About Us
+      a.menu__item(href="reviews.html") Reviews
+      a.menu__item(href="contacts.html") Contact
+      a.menu__item(href="http://blog.soshace.com/ru/") Blog

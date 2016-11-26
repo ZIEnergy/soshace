@@ -15,8 +15,33 @@
     font-weight: 300;
     display: flex;
     align-items: center;
-    width: 33%;
+    width: 33.3%;
     min-height: 11.2rem;
+    
+    @media screen and (max-width: @screen-md) {
+      flex-direction: column;
+    }
+    
+    &:nth-child(4) {
+    
+      @media screen and (max-width: @screen-md) {
+        order: 5;
+      }
+    }
+    
+    &:nth-child(5) {
+    
+      @media screen and (max-width: @screen-md) {
+        order: 4;
+      }
+    }
+    
+    &:nth-child(6) {
+    
+      @media screen and (max-width: @screen-md) {
+        order: 6;
+      }
+    }
     
     &:nth-child(n+4) {
       margin-top: 10rem;
@@ -27,12 +52,17 @@
       display: block;
       width: 14rem;
       height: 11.2rem;
+      margin-bottom: 2.2rem;
     }
     
     &--angular {
       
       &:before {
-        background: url(../img/tech-angular.png) no-repeat;;
+        background: url(../img/tech-angular.png) no-repeat;
+    
+        @media screen and (max-width: @screen-md) {
+          background-position: center bottom;
+        }
       }
     }
     
@@ -41,6 +71,10 @@
       &:before {
         background: url(../img/tech-react.png) no-repeat;
         background-position: left center;
+    
+        @media screen and (max-width: @screen-md) {
+          background-position: center bottom;
+        }
       }
     }
     
@@ -49,6 +83,10 @@
       &:before {
         background: url(../img/tech-d3.png) no-repeat;
         background-position: left center;
+    
+        @media screen and (max-width: @screen-md) {
+          background-position: center bottom;
+        }
       }
     }
     
@@ -58,6 +96,10 @@
         width: 22.4rem;
         background: url(../img/tech-meteor.png) no-repeat;
         background-position: left center;
+    
+        @media screen and (max-width: @screen-md) {
+          background-position: center bottom;
+        }
       }
     }
     
@@ -66,6 +108,10 @@
       &:before {
         background: url(../img/tech-html.png) no-repeat;
         background-position: left center;
+    
+        @media screen and (max-width: @screen-md) {
+          background-position: center bottom;
+        }
       }
     }
     
@@ -74,6 +120,10 @@
       &:before {
         background: url(../img/tech-css.png) no-repeat;
         background-position: left center;
+    
+        @media screen and (max-width: @screen-md) {
+          background-position: center bottom;
+        }
       }
     }
   }

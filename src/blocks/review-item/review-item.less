@@ -154,4 +154,34 @@
   &--detailed {
     width: 104rem;
   }
+  
+  &--vertical {
+        
+    @media screen and (max-width: @screen-md) {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .review-item__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .review-item__info {
+      margin-bottom: 1rem;
+    }
+    
+    .review-item__date {
+      text-align: center;
+    }
+    
+    .review-item__info-item {
+      justify-content: center;
+    }
+    
+    .review-item__dscr {
+      text-align: center;
+    }
+  }
 }

@@ -22,6 +22,11 @@
   position: absolute;
   top: 9.7rem;
   cursor: pointer;
+        
+  @media screen and (max-width: @screen-md) {
+    top: 50%;
+    margin-top: -1.9rem;
+  }
   
   &:focus {
      outline: 0;
@@ -30,9 +35,13 @@
 
 .slick-next {
   right: -10rem;
+        
+  @media screen and (max-width: @screen-md) {
+    right: 4rem;
+  }
 }
 
 .slick-prev {
   transform: rotate(180deg);
-  left: -10rem;
+  left: 4rem;
 }

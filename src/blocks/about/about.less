@@ -2,6 +2,11 @@
   background: url(../img/us.jpg) no-repeat;
   background-size: cover;
   position: relative;
+    
+  @media screen and (max-width: @screen-md) {
+    background: url(../img/us-tablet.jpg) no-repeat;
+    background-size: cover;
+  }
   
   &:before {
     content: '';
@@ -13,12 +18,20 @@
     left: 0;
     background: @color-second;
     opacity: .9;
+    
+    @media screen and (max-width: @screen-md) {
+      display: none;
+    }
   }
   
   &__wrapper {
     position: relative;
     z-index: 2;
     width: 103rem;
+    
+    @media screen and (max-width: @screen-md) {
+      width: auto;
+    }
   }
   
   &__content {
@@ -35,6 +48,10 @@
     left: 50%;
     transform: translateX(-50%);
     top: 20rem;
+    
+    @media screen and (max-width: @screen-md) {
+      display: none;
+    }
   }
   
   &__arrow {

@@ -5,6 +5,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 8.9rem;
+    
+    @media screen and (max-width: @screen-md) {
+      padding: 0 6rem;
+    }
   }
   
   &__item {
@@ -18,69 +22,74 @@
     flex: 0 0 auto;
     padding-right: 3rem;
     
+    @media screen and (max-width: @screen-md) {
+      width: 33.3%;
+      flex-direction: column;
+      text-align: center;
+    }
+    
     &:before {
       content: '';
       display: block;
       margin-right: 3.7rem;
       width: 10rem;
+      height: 12.7rem;
       flex: 0 0 auto;
+    
+      @media screen and (max-width: @screen-md) {
+        margin-right: 0;
+      }
     }
     
     &:nth-child(n+4) {
-      margin-top: 9rem;
+      margin-top: 7rem;
     }
     
     &--server {
       
       &:before {
-        background: url(../img/service-1.png) no-repeat;
-        background-size: cover;
-        height: 9rem;
+        background: url(../img/service-1.png) no-repeat center;
+        background-size: contain;
       }
     }
     
     &--adaptive {
       
       &:before {
-        background: url(../img/service-2.png) no-repeat;
-        background-size: cover;
-        height: 10rem;
+        background: url(../img/service-2.png) no-repeat center;
+        background-size: contain;
       }
     }
     
     &--client {
       
       &:before {
-        background: url(../img/service-3.png) no-repeat;
-        background-size: cover;
-        height: 9.3rem;
+        background: url(../img/service-3.png) no-repeat center;
+        background-size: contain;
       }
     }
     
     &--webapps {
       
       &:before {
-        background: url(../img/service-4.png) no-repeat;
-        background-size: cover;
-        height: 9rem;
+        background: url(../img/service-4.png) no-repeat center;
+        background-size: contain;
       }
     }
     
     &--prototypes {
       
       &:before {
-        background: url(../img/service-5.png) no-repeat;
-        background-size: cover;
-        height: 9rem;
+        background: url(../img/service-5.png) no-repeat center;
+        background-size: contain;
       }
     }
     
     &--leased {
       
       &:before {
-        background: url(../img/service-6.png) no-repeat;
-        background-size: cover;
-        height: 12.7rem;
+        background: url(../img/service-6.png) no-repeat center;
+        background-size: contain;
       }
     }
   }

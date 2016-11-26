@@ -7,6 +7,10 @@
   min-height: 88rem;
   position: relative;
   overflow: hidden;
+    
+  @media screen and (max-width: @screen-md) {
+    padding-top: 22.4rem;
+  }
   
   &:after {
     content: '';
@@ -41,6 +45,10 @@
     justify-content: center;
     margin-top: 8rem;
     margin-bottom: 12.2rem;
+    
+    @media screen and (max-width: @screen-md) {
+      justify-content: space-between;
+    }
   }
   
   &__about-item {
@@ -55,10 +63,22 @@
     
     &:nth-child(2n+1) {
       margin-right: 6.5rem;
+    
+      @media screen and (max-width: @screen-md) {
+        margin-right: 0;
+        padding-left: 4rem;
+        padding-right: 2rem;
+      }
     }
     
     &:nth-child(2n+2) {
       margin-left: 6.5rem;
+    
+      @media screen and (max-width: @screen-md) {
+        margin-left: 0;
+        max-width: 30rem;
+        margin-right: 2.8rem;
+      }
     }
     
     &:nth-child(n+3) {
