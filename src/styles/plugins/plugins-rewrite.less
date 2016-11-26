@@ -45,3 +45,32 @@
   transform: rotate(180deg);
   left: 4rem;
 }
+
+.slick-dots {
+  display: flex!important;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1.4rem;
+  
+  li {
+    
+    &.slick-active {
+      
+      button {
+        background: @color-third;
+      }
+    }
+    
+    + li {
+      margin-left: .9rem;
+    }
+    
+    button {
+      border-radius: 50%;
+      width: .9rem;
+      height: .9rem;
+      background: #dadada;
+      color: transparent;
+    }
+  }
+}
