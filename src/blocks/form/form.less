@@ -1,5 +1,26 @@
 .form {
-  position: relative;
+  
+  &__content {
+    
+  }
+  
+  &__content-container {
+    max-width: 58rem;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  &__dscr {
+    font-size: 2.2rem;
+    font-weight: 300;
+    font-family: @font-first;
+    color: #fff;
+    line-height: 3.2rem;
+    max-width: 75rem;
+    margin: 9rem auto 2.4rem;
+    text-align: center;
+    display: block;
+  }
   
   &__input {
     
@@ -30,5 +51,46 @@
     font-size: 1.6rem;
     font-family: @font-first;
     margin-top: .6rem;
+  }
+  
+  &__message {
+    margin-top: 9rem;
+    
+    &--success {
+      
+      .form__message-icon {
+        background: url(../img/form-success.png) no-repeat;
+        background-size: cover;
+      }
+    }
+    
+    &--error {
+      
+      .form__message-icon {
+        background: url(../img/form-error.png) no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  
+  &__message-text {
+    color: #fff;
+    font-family: @font-first;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 3.2rem;
+    margin-bottom: 7.4rem;
+  }
+  
+  &__message-icon {
+    width: 18.1rem;
+    height: 18.1rem;
+    margin: 0 auto;
+  }
+  
+  &__message-link {
+    color: #fff;
+    margin-left: .5rem;
   }
 }
