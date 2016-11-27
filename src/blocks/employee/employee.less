@@ -1,5 +1,17 @@
 .employee {
+  padding-top: 8rem;
   padding-bottom: 11.6rem; 
+    
+  @media screen and (max-width: @screen-md) {
+    padding-left: 3.7rem;
+    padding-right: 3.7rem;
+  }
+    
+  @media screen and (max-width: @screen-sm) {
+    padding-top: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   
   &__content {
     display: flex;
@@ -9,6 +21,10 @@
     @media screen and (max-width: @screen-md) {
       flex-direction: column;
       align-items: center;
+    }
+    
+    @media screen and (max-width: @screen-sm) {
+      margin-top: 6rem;
     }
   }
   
@@ -34,11 +50,22 @@
   
   &__portfolio {
     margin-top: 5rem;
+    
+    @media screen and (max-width: @screen-sm) {
+      padding: 0;
+    }
   }
   
   &__video {
     width: 54.2rem;
     height: 30.3rem;
     display: none;
+  }
+  
+  &__name {
+    
+    @media screen and (max-width: @screen-sm) {
+      text-transform: capitalize;
+    }
   }
 }

@@ -9,6 +9,10 @@
     margin: 0 auto;
     height: 31.5rem;
   }
+    
+  @media screen and (max-width: @screen-sm) {
+    height: auto;
+  }
   
   &__picture {
     width: 100%;
@@ -44,6 +48,7 @@
     @media screen and (max-width: @screen-md) {
       text-align: center;
       margin-top: 0;
+      padding: 1.5rem .5rem;
     }
     
     &:hover {
@@ -60,6 +65,7 @@
     color: #fff;
     font-size: 2.2rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
   }
   
   &__dscr {
@@ -68,6 +74,13 @@
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 2.8rem;
+  }
+  
+  &__dscr-header {
+    
+    @media screen and (max-width: @screen-sm) {
+      display: block;
+    }
   }
   
   &__link {
