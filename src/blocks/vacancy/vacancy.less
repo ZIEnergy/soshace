@@ -1,11 +1,20 @@
 .vacancy {
   display: flex;
   margin-top: 6.5rem;
+    
+  @media screen and (max-width: @screen-md) {
+    padding: 0 2.5rem 0 7rem;
+  }
   
   &__icon {
     width: 20rem;
     height: 20rem;
     margin-right: 7.7rem;
+    flex: 0 0 auto;
+    
+    @media screen and (max-width: @screen-md) {
+      margin-right: 4.3rem;
+    }
     
     &--developer-js {
       background: url(../img/developer-js.png) no-repeat;

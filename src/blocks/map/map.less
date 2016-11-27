@@ -1,6 +1,10 @@
 .map {
   height: 82rem;
   position: relative;
+    
+  @media screen and (max-width: @screen-md) {
+    height: 96rem;
+  }
   
   &__content {
     width: 100%;
@@ -11,5 +15,14 @@
     position: absolute;
     top: 11.3rem;
     left: 37rem;
+    
+    @media screen and (max-width: @screen-md) {
+      top: auto;
+      bottom: 12.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 54rem;
+      padding: 4.5rem;
+    }
   }
 }
