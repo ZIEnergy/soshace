@@ -9,9 +9,28 @@
       padding-left: 10rem;
       padding-right: 10rem;
     }
+        
+    @media screen and (max-width: @screen-sm) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
     
     .slick-arrow {
       top: 12rem;
+    }
+    
+    .slick-next {
+        
+      @media screen and (max-width: @screen-sm) {
+        right: 1rem;
+      }
+    }
+    
+    .slick-prev {
+        
+      @media screen and (max-width: @screen-sm) {
+        left: 1rem;
+      }
     }
   }
 }
