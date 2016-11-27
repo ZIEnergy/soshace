@@ -5,10 +5,18 @@
   @media screen and (max-width: @screen-md) {
     height: 96rem;
   }
+    
+  @media screen and (max-width: @screen-sm) {
+    height: auto;
+  }
   
   &__content {
     width: 100%;
     height: 100%;
+    
+    @media screen and (max-width: @screen-sm) {
+      height: 40rem;
+    }
   }
   
   &__contacts {
@@ -23,6 +31,14 @@
       transform: translateX(-50%);
       width: 54rem;
       padding: 4.5rem;
+    }
+    
+    @media screen and (max-width: @screen-sm) {
+      position: static;
+      width: 100%;
+      left: 0;
+      transform: none;
+      padding: 6rem 1.5rem;
     }
   }
 }
