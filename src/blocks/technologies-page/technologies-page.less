@@ -1,5 +1,10 @@
 .technologies-page {
   padding-bottom: 11rem;
+    
+  @media screen and (max-width: @screen-md) {
+    padding-left: 3.7rem;
+    padding-right: 3.7rem;
+  }
   
   &__subheader {
     margin-top: 8rem;
@@ -16,8 +21,19 @@
   &__item {
     width: 33%;
     
+    @media screen and (max-width: @screen-md) {
+      width: 50%;
+    }
+    
     &:nth-child(n+4) {
       margin-top: 8.5rem;
+    }
+    
+    &:nth-child(n+3) {
+    
+      @media screen and (max-width: @screen-md) {
+        margin-top: 8.5rem;
+      }
     }
   }
   

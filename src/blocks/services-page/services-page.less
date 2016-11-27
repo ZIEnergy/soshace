@@ -26,11 +26,17 @@
     }
     
     &:nth-child(2n+1) {
-      padding-right: 4.5rem;
+    
+      @media screen and (max-width: @screen-md) {
+        padding-right: 4.5rem;
+      }
     }
     
     &:nth-child(2n+2) {
-      padding-left: 4.5rem;
+    
+      @media screen and (max-width: @screen-md) {
+        padding-left: 4.5rem;
+      }
     }
     
     &:nth-child(n+4) {
@@ -38,7 +44,10 @@
     }
     
     &:nth-child(n+3) {
-      margin-top: 8rem;
+    
+      @media screen and (max-width: @screen-md) {
+        margin-top: 8rem;
+      }
     }
   }
   
