@@ -1,6 +1,11 @@
 .project {
   padding-bottom: 11.4rem;
   padding-top: 8rem;
+        
+  @media screen and (max-width: @screen-md) {
+    padding-left: 3.7rem;
+    padding-right: 3.7rem;
+  }
   
   &__content {
     margin-top: 9rem;
@@ -17,6 +22,10 @@
     font-size: 2.2rem;
     font-family: @font-first;
     margin-bottom: 1rem;
+        
+    @media screen and (max-width: @screen-md) {
+      text-align: center;
+    }
   }
   
   &__content-text {
@@ -41,9 +50,20 @@
   &__technologies {
     display: flex;
     align-items: center;
+        
+    @media screen and (max-width: @screen-md) {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 60rem;
+    }
   }
   
   &__technologies-item {
+        
+    @media screen and (max-width: @screen-md) {
+      margin-bottom: 2rem;
+    }
     
     &:nth-child(n+2) {
       margin-left: 2.5rem;
@@ -95,6 +115,10 @@
   &__screenshot {
     margin-top: 7rem;
     margin-bottom: 6rem;
+        
+    @media screen and (max-width: @screen-md) {
+      max-width: 100%;
+    }
   }
   
   &__reviews {
