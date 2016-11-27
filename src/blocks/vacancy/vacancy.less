@@ -5,6 +5,11 @@
   @media screen and (max-width: @screen-md) {
     padding: 0 2.5rem 0 7rem;
   }
+    
+  @media screen and (max-width: @screen-sm) {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
   
   &__icon {
     width: 20rem;
@@ -16,29 +21,61 @@
       margin-right: 4.3rem;
     }
     
+    @media screen and (max-width: @screen-sm) {
+      margin-right: 0;
+      margin-bottom: 5rem;
+      width: 15.7rem;
+      height: 15.3rem;
+    }
+    
     &--developer-js {
       background: url(../img/developer-js.png) no-repeat;
       background-position: top center;
+    
+      @media screen and (max-width: @screen-sm) {
+        background-size: contain;
+        background-position: top left;
+      }
     }
     
     &--developer-front {
       background: url(../img/developer-front.png) no-repeat;
       background-position: top center;
+    
+      @media screen and (max-width: @screen-sm) {
+        background-size: contain;
+        background-position: top left;
+      }
     }
     
     &--tester {
       background: url(../img/tester.png) no-repeat;
       background-position: top center;
+    
+      @media screen and (max-width: @screen-sm) {
+        background-size: contain;
+        background-position: top left;
+      }
     }
     
     &--manager {
       background: url(../img/manager.png) no-repeat;
       background-position: top center;
+    
+      @media screen and (max-width: @screen-sm) {
+        background-size: contain;
+        background-position: top left;
+      }
     }
     
     &--editor {
       background: url(../img/editor.png) no-repeat;
       background-position: top center;
+    
+      @media screen and (max-width: @screen-sm) {
+        background-size: contain;
+        background-position: top left;
+      }
     }
   }
   
@@ -53,6 +90,10 @@
     margin-bottom: 4rem;
     text-decoration: none;
     display: block;
+    
+    @media screen and (max-width: @screen-sm) {
+      line-height: 3.4rem;
+    }
   }
   
   &__list {
@@ -75,6 +116,7 @@
       height: .4rem;
       margin-top: 1.2rem;
       margin-right: 1.5rem;
+      flex: 0 0 auto;
     }
   }
   
