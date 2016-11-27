@@ -40,6 +40,10 @@
     font-size: 1.8rem;
     display: flex;
     align-items: center;
+        
+    @media screen and (max-width: @screen-md) {
+      flex-wrap: wrap;
+    }
     
     &:nth-child(n+2) {
       margin-top: .5rem;
