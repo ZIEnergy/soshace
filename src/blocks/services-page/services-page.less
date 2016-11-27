@@ -1,5 +1,10 @@
 .services-page {
   padding-bottom: 16rem;
+    
+  @media screen and (max-width: @screen-md) {
+    padding-left: 3.7rem;
+    padding-right: 3.7rem;
+  }
   
   &__list {
     display: flex;
@@ -11,11 +16,28 @@
     max-width: 34rem;
     margin-left: 8rem;
     
+    @media screen and (max-width: @screen-md) {
+      width: 50%;
+      margin-left: 0;
+    }
+    
     &:nth-child(3n+1) {
       margin-left: 0;
     }
     
+    &:nth-child(2n+1) {
+      padding-right: 4.5rem;
+    }
+    
+    &:nth-child(2n+2) {
+      padding-left: 4.5rem;
+    }
+    
     &:nth-child(n+4) {
+      margin-top: 8rem;
+    }
+    
+    &:nth-child(n+3) {
       margin-top: 8rem;
     }
   }
