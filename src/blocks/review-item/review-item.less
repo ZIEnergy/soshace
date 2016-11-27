@@ -87,6 +87,10 @@
     
     &--short {
       width: 48rem;
+        
+      @media screen and (max-width: @screen-md) {
+        width: 100%;
+      }
     }
   }
   
@@ -110,12 +114,20 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+        
+    @media screen and (max-width: @screen-md) {
+      flex-direction: column;
+    }
   }
   
   &__content-bottom {
     display: flex;
     justify-content: space-between;
     width: 100%;
+        
+    @media screen and (max-width: @screen-md) {
+      flex-direction: column;
+    }
   }
   
   &__project-price {
@@ -138,10 +150,22 @@
   
   &__rating-details {
     width: 16rem;
+        
+    @media screen and (max-width: @screen-md) {
+      order: 1;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 2rem;
+    }
   }
   
   &__rating-details-item {
     display: flex;
+        
+    @media screen and (max-width: @screen-md) {
+      width: 50%;
+    }
   }
   
   &__rating-details-header {
@@ -161,6 +185,18 @@
   
   &--detailed {
     width: 104rem;
+        
+    @media screen and (max-width: @screen-md) {
+      width: 100%;
+    }
+    
+    .review-item__link {
+      display: none;
+    }
+    
+    .review-item__content-subject {
+      order: 2;
+    }
   }
   
   &--vertical {
