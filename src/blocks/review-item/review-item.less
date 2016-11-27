@@ -8,17 +8,24 @@
   
   &:nth-child(n+2) {
     margin-top: 6rem;
-    padding-top: 7.5rem;
-    border-top: 1px solid #e6e6e6;
         
     @media screen and (max-width: @screen-md) {
       padding-top: 6rem;
+    }
+    
+    .review-item__content {
+      border-top: 1px solid #e6e6e6;
+      padding-top: 7.5rem;
+    }
+    
+    .review-item__author-photo {
+      margin-top: 7.5rem;
     }
   }
   
   &__author-photo {
     display: block;
-    margin-right: 4rem;
+    margin-right: 4.2rem;
         
     @media screen and (max-width: @screen-sm) {
       margin: 0 auto 6rem;
@@ -28,6 +35,7 @@
   
   &__content {
     width: 100%;
+    margin-top: -.7rem;
   }
   
   &__info {
@@ -60,10 +68,6 @@
     @media screen and (max-width: @screen-sm) {
       justify-content: center;
     }
-    
-    &:nth-child(n+2) {
-      margin-top: .5rem;
-    }
   }
   
   &__info-header {
@@ -84,7 +88,7 @@
   &__evaluation {
     display: flex;
     align-items: center;
-    margin: 2rem 0 1.4rem;
+    margin: 2.7rem 0 1.4rem;
     
     @media screen and (max-width: @screen-sm) {
       justify-content: center;
@@ -125,7 +129,7 @@
   &__link {
     font-family: @font-first;
     font-size: 1.6rem;
-    margin-top: 1.5rem;
+    margin-top: 1.4rem;
     color: #000;
     display: block;
     
@@ -182,6 +186,7 @@
   
   &__rating-details {
     width: 16rem;
+    margin-top: 2.7rem;
         
     @media screen and (max-width: @screen-md) {
       order: 1;

@@ -3,8 +3,8 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 8.9rem;
+    margin-top: 6.1rem;
+    margin-bottom: 5.5rem;
     
     @media screen and (max-width: @screen-md) {
       padding: 0 6rem;
@@ -20,7 +20,6 @@
     line-height: 3.2rem;
     width: 30rem;
     flex: 0 0 auto;
-    padding-right: 3rem;
     
     @media screen and (max-width: @screen-md) {
       width: 33.3%;
@@ -46,6 +45,14 @@
       }
     }
     
+    &:nth-child(3n+2) {
+      margin-left: 14rem;
+    }
+    
+    &:nth-child(3n+3) {
+      margin-left: 10.3rem;
+    }
+    
     &:nth-child(n+2) {
     
       @media screen and (max-width: @screen-sm) {
@@ -54,7 +61,7 @@
     }
     
     &:nth-child(n+4) {
-      margin-top: 7rem;
+      margin-top: 6.5rem;
     
       @media screen and (max-width: @screen-sm) {
         margin-top: 6rem;
@@ -64,7 +71,7 @@
     &--server {
       
       &:before {
-        background: url(../img/service-1.png) no-repeat center;
+        background: url(../img/service-1.svg) no-repeat center;
         background-size: contain;
       }
     }
@@ -72,7 +79,7 @@
     &--adaptive {
       
       &:before {
-        background: url(../img/service-2.png) no-repeat center;
+        background: url(../img/service-2.svg) no-repeat center;
         background-size: contain;
       }
     }
@@ -80,7 +87,7 @@
     &--client {
       
       &:before {
-        background: url(../img/service-3.png) no-repeat center;
+        background: url(../img/service-3.svg) no-repeat center;
         background-size: contain;
       }
     }
@@ -88,7 +95,7 @@
     &--webapps {
       
       &:before {
-        background: url(../img/service-4.png) no-repeat center;
+        background: url(../img/service-4.svg) no-repeat center;
         background-size: contain;
       }
     }
@@ -96,7 +103,7 @@
     &--prototypes {
       
       &:before {
-        background: url(../img/service-5.png) no-repeat center;
+        background: url(../img/service-5.svg) no-repeat center;
         background-size: contain;
       }
     }
@@ -104,7 +111,7 @@
     &--leased {
       
       &:before {
-        background: url(../img/service-6.png) no-repeat center;
+        background: url(../img/service-6.svg) no-repeat center;
         background-size: contain;
       }
     }

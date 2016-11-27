@@ -25,8 +25,8 @@ $(window).width()<901&&$(".portfolio-list").slick({slidesToShow:1,slidesToScroll
 
 
 
-
 $(".reviews__content").slick({arrows:!0,responsive:[{breakpoint:900,settings:{dots:!0}},{breakpoint:480,settings:{arrows:!1,dots:!0}}]});
+
 $(window).width()<901&&$(".reviews-page__content").slick({slidesToShow:1,slidesToScroll:1,arrows:!0});
 
 

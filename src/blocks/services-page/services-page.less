@@ -14,7 +14,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 8.9rem;
+    margin-top: 4.4rem;
         
     @media screen and (max-width: @screen-sm) {
       flex-direction: column;
@@ -40,7 +40,10 @@
     }
     
     &:nth-child(n+2) {
-      margin-top: 6rem;
+        
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 6rem;
+      }
     }
     
     &:nth-child(3n+1) {
@@ -94,38 +97,38 @@
     height: 12.7rem;
     
     &--server {
-      background: url(../img/service-1.png) no-repeat;
+      background: url(../img/service-1.svg) no-repeat;
       background-position: left bottom;
     }
     
     &--adaptive {
-      background: url(../img/service-2.png) no-repeat;
+      background: url(../img/service-2.svg) no-repeat;
       background-position: left bottom;
     }
     
     &--client {
-      background: url(../img/service-3.png) no-repeat;
+      background: url(../img/service-3.svg) no-repeat;
       background-position: left bottom;
     }
     
     &--web {
-      background: url(../img/service-4.png) no-repeat;
+      background: url(../img/service-4.svg) no-repeat;
       background-position: left bottom;
     }
     
     &--prototype {
-      background: url(../img/service-5.png) no-repeat;
+      background: url(../img/service-5.svg) no-repeat;
       background-position: left bottom;
     }
     
     &--dedicated {
-      background: url(../img/service-6.png) no-repeat;
+      background: url(../img/service-6.svg) no-repeat;
       background-position: left bottom;
     }
   }
   
   &__item-name {
-    margin: 2rem 0 1rem;
+    margin: 2rem 0 .8rem;
     font-size: 2.2rem;
     font-family: @font-first;
     font-weight: 300;
