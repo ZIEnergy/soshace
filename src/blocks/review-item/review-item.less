@@ -235,7 +235,11 @@
     }
     
     .review-item__info-item {
-      justify-content: center;
+        
+      @media screen and (max-width: @screen-sm) {
+        justify-content: center;
+      }
+      
     }
     
     .review-item__date {
@@ -246,30 +250,48 @@
     }
     
     .review-item__project-price {
-      width: 100%;
-      text-align: center;
-      margin-top: 2.5rem;
+        
+      @media screen and (max-width: @screen-sm) {
+        width: 100%;
+        text-align: center;
+        margin-top: 2.5rem;
+      }
     }
     
     .review-item__rating-details-item {
-      width: 100%;
-      justify-content: center;
+        
+      @media screen and (max-width: @screen-sm) {
+        width: 100%;
+        justify-content: center;
+      }
     }
     
     .review-item__evaluation {
-      justify-content: center;
+        
+      @media screen and (max-width: @screen-sm) {
+        justify-content: center;
+      }
     }
     
     .review-item__dscr {
-      text-align: center;
+        
+      @media screen and (max-width: @screen-sm) {
+        text-align: center;
+      }
     }
     
     .review-item__link {
-      display: none;
+        
+      @media screen and (max-width: @screen-sm) {
+        display: none;
+      }
     }
     
     .review-item__content-subject {
-      order: 2;
+        
+      @media screen and (max-width: @screen-sm) {
+        order: 2;
+      }
     }
   }
   

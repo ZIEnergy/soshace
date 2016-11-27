@@ -17,7 +17,7 @@ mixin review-item(photo, date, project, projectLink, projectStage, client, emplo
         +stars(star1, star2, star3, star4, star5, 'review-item__stars')
         .review-item__rating #{rating}
       p.review-item__dscr #{reviewContent}
-      a.review-item__link(href="#") Details
+      a.review-item__link(href="review.html") Details
       
 mixin review-item--nolink(photo, date, project, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass, additionalClass2)
   .review-item(class=additionalClass, class=additionalClass2)
@@ -37,7 +37,7 @@ mixin review-item--nolink(photo, date, project, client, employee, star1, star2, 
         +stars(star1, star2, star3, star4, star5, 'review-item__stars')
         .review-item__rating #{rating}
       p.review-item__dscr #{reviewContent}
-      a.review-item__link(href="#") Details
+      a.review-item__link(href="review.html") Details
       
 mixin review-item--nophoto(date, project, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass, additionalClass2)
   .review-item.review-item--nophoto(class=additionalClass, class=additionalClass2)
@@ -56,7 +56,7 @@ mixin review-item--nophoto(date, project, client, employee, star1, star2, star3,
         +stars(star1, star2, star3, star4, star5, 'review-item__stars')
         .review-item__rating #{rating}
       p.review-item__dscr #{reviewContent}
-      a.review-item__link(href="#") Details
+      a.review-item__link(href="review.html") Details
       
 mixin review-item--detailed(photo, date, project, projectLink, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass, additionalClass2)
     .review-item.review-item--detailed(class=additionalClass, class=additionalClass2)
@@ -83,7 +83,7 @@ mixin review-item--detailed(photo, date, project, projectLink, projectStage, cli
               +stars(star1, star2, star3, star4, star5, 'review-item__stars')
               .review-item__rating #{rating}
             p.review-item__dscr.review-item__dscr--short #{reviewContent}
-            a.review-item__link(href="#") Details
+            a.review-item__link(href="review.html") Details
           ul.review-item__rating-details
             li.review-item__rating-details-item 
               .review-item__rating-details-header Skills
