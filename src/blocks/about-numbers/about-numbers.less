@@ -61,15 +61,27 @@
     
     .about-numbers__item {
       width: auto;
+    
+      @media screen and (max-width: @screen-md) {
+        width: 50%;
+      }
       
       &:nth-child(n+3) {
         margin-top: 0;
+    
+        @media screen and (max-width: @screen-md) {
+          margin-top: 6rem;
+        }
       }
     
       &:nth-child(2n+2) {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+    
+        @media screen and (max-width: @screen-md) {
+          align-items: center;
+        }
       }
       
       &:nth-child(3) {

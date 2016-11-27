@@ -7,12 +7,26 @@
     margin-top: 9rem;
   }
   
+  &:nth-child(n+3) {
+    
+    @media screen and (max-width: @screen-md) {
+      margin-top: 9rem;
+    }
+  }
+  
   &:nth-child(n+2) {
     margin-left: 5rem;
   }
   
   &:nth-child(3n+1) {
     margin-left: 0;
+  }
+  
+  &:nth-child(2n+1) {
+    
+    @media screen and (max-width: @screen-md) {
+      margin-left: 0;
+    }
   }
   
   &__picture {
