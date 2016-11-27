@@ -26,7 +26,7 @@ $(window).width()<769&&$(".portfolio__portfolio-list").slick({slidesToShow:1,sli
 
 
 
-$(".reviews__content").slick({});
+$(".reviews__content").slick({dots:!0});
 
 
 
