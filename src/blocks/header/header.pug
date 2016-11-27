@@ -1,6 +1,6 @@
 mixin header(additionalClass)
   .header(class=additionalClass)
     .wrapper.header__wrapper
-      +logo
+      +logo('header__logo')
       +menu
-      +button('button--small')
+      +button('button--small', 'header__button')
