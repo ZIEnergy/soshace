@@ -6,6 +6,12 @@
     padding-left: 3.7rem;
     padding-right: 3.7rem;
   }
+        
+  @media screen and (max-width: @screen-sm) {
+    padding-top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   
   &__screenshot {
     margin-top: 19rem;
@@ -13,6 +19,10 @@
     @media screen and (max-width: @screen-md) {
       width: 100%;
       margin-top: 7rem;
+    }
+        
+    @media screen and (max-width: @screen-sm) {
+      display: none;
     }
   }
   

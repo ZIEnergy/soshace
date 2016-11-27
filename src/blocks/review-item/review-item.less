@@ -193,6 +193,48 @@
     @media screen and (max-width: @screen-md) {
       width: 100%;
     }
+        
+    @media screen and (max-width: @screen-sm) {
+      flex-direction: column;
+    }
+    
+    .review-item__author-photo {
+        
+      @media screen and (max-width: @screen-sm) {
+        margin: 0 auto;
+        margin-bottom: 5.5rem;
+      }
+    }
+    
+    .review-item__info-item {
+      justify-content: center;
+    }
+    
+    .review-item__date {
+        
+      @media screen and (max-width: @screen-sm) {
+        text-align: center;
+      }
+    }
+    
+    .review-item__project-price {
+      width: 100%;
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    
+    .review-item__rating-details-item {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .review-item__evaluation {
+      justify-content: center;
+    }
+    
+    .review-item__dscr {
+      text-align: center;
+    }
     
     .review-item__link {
       display: none;
