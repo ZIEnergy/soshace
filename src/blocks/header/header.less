@@ -4,6 +4,10 @@
   position: absolute;
   width: 100%;
   z-index: 8;
+    
+  @media screen and (max-width: @screen-sm) {
+    position: relative;
+  }
   
   &__wrapper {
     display: flex;
@@ -13,10 +17,18 @@
     @media screen and (max-width: @screen-md) {
       padding: 0 9.4rem 0 4.2rem;
     }
+    
+    @media screen and (max-width: @screen-sm) {
+      padding: 0 2rem;
+    }
   }
   
   &__button {
     z-index: 9;
+    
+    @media screen and (max-width: @screen-sm) {
+      display: none;
+    }
   }
   
   &__logo {

@@ -6,6 +6,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 9.6rem;
+    
+    @media screen and (max-width: @screen-sm) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   
   &__item {
@@ -45,6 +50,17 @@
     
     &:nth-child(n+4) {
       margin-top: 10rem;
+    
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 6rem;
+      }
+    }
+    
+    &:nth-child(n+2) {
+    
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 6rem;
+      }
     }
     
     &:before {

@@ -24,6 +24,11 @@
     margin: 9rem auto 2.4rem;
     text-align: center;
     display: block;
+        
+    @media screen and (max-width: @screen-sm) {
+      font-size: 1.8rem;
+      margin-top: 6rem;
+    }
   }
   
   &__input {
@@ -41,6 +46,15 @@
     position: absolute;
     right: -9.5rem;
     bottom: 11.4rem;
+        
+    @media screen and (max-width: @screen-sm) {
+      position: static;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3rem;
+    }
   }
   
   &__upload-icon {

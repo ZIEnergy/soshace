@@ -1,4 +1,4 @@
-if ($(window).width() < 769) {
+if ($(window).width() < 901) {
   $('.reviews-page__content').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

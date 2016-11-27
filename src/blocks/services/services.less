@@ -28,6 +28,11 @@
       text-align: center;
     }
     
+    @media screen and (max-width: @screen-sm) {
+      width: 100%;
+      padding-right: 0;
+    }
+    
     &:before {
       content: '';
       display: block;
@@ -41,8 +46,19 @@
       }
     }
     
+    &:nth-child(n+2) {
+    
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 6rem;
+      }
+    }
+    
     &:nth-child(n+4) {
       margin-top: 7rem;
+    
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 6rem;
+      }
     }
     
     &--server {

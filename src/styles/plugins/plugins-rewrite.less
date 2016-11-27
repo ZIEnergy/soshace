@@ -43,7 +43,12 @@
 
 .slick-prev {
   transform: rotate(180deg);
-  left: 4rem;
+  left: -10rem;
+        
+  @media screen and (max-width: @screen-md) {
+    left: 4rem;
+  }
+  
 }
 
 .slick-dots {

@@ -11,7 +11,7 @@ $('a[href*=#]').click(function () {
   }
 });
 
-if ($(window).width() < 1200 && $(window).width() > 768) {
+if ($(window).width() < 1200 && $(window).width() > 900) {
   $(function () {
       $(window).bind('resize', function () {
           resizeMe();

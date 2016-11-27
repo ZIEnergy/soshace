@@ -6,6 +6,10 @@
   &__item {
     width: 50%;
     
+    @media screen and (max-width: @screen-sm) {
+      width: 100%;
+    }
+    
     &:nth-child(2n+2) {
       display: flex;
       flex-direction: column;
@@ -19,6 +23,13 @@
     
     &:nth-child(n+3) {
       margin-top: 6rem;
+    }
+    
+    &:nth-child(n+2) {
+    
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 6rem;
+      }
     }
   }
   
