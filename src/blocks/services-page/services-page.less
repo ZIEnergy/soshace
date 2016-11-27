@@ -5,11 +5,22 @@
     padding-left: 3.7rem;
     padding-right: 3.7rem;
   }
+        
+  @media screen and (max-width: @screen-sm) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   
   &__list {
     display: flex;
     flex-wrap: wrap;
     margin-top: 8.9rem;
+        
+    @media screen and (max-width: @screen-sm) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4rem;
+    }
   }
   
   &__item {
@@ -19,6 +30,17 @@
     @media screen and (max-width: @screen-md) {
       width: 50%;
       margin-left: 0;
+    }
+        
+    @media screen and (max-width: @screen-sm) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    &:nth-child(n+2) {
+      margin-top: 6rem;
     }
     
     &:nth-child(3n+1) {
@@ -30,6 +52,10 @@
       @media screen and (max-width: @screen-md) {
         padding-right: 4.5rem;
       }
+        
+      @media screen and (max-width: @screen-sm) {
+        padding-right: 0;
+      }
     }
     
     &:nth-child(2n+2) {
@@ -37,16 +63,28 @@
       @media screen and (max-width: @screen-md) {
         padding-left: 4.5rem;
       }
+        
+      @media screen and (max-width: @screen-sm) {
+        padding-left: 0;
+      }
     }
     
     &:nth-child(n+4) {
       margin-top: 8rem;
+        
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 6rem;
+      }
     }
     
     &:nth-child(n+3) {
     
       @media screen and (max-width: @screen-md) {
         margin-top: 8rem;
+      }
+        
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 6rem;
       }
     }
   }
@@ -99,6 +137,10 @@
     font-weight: 300;
     line-height: 2.8rem;
     font-family: @font-first;
+        
+    @media screen and (max-width: @screen-sm) {
+      text-align: center;
+    }
   }
   
   &__item-link {
