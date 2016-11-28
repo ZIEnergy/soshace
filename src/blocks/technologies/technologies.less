@@ -7,6 +7,11 @@
     margin-top: 8.6rem;
     margin-bottom: 4.9rem;
     
+    @media screen and (max-width: @screen-md) {
+      padding-left: 2rem;
+      margin-bottom: 5.9rem;
+    }
+    
     @media screen and (max-width: @screen-sm) {
       flex-direction: column;
       align-items: center;
@@ -25,39 +30,32 @@
     
     @media screen and (max-width: @screen-md) {
       flex-direction: column;
+      align-items: center;
+      line-height: 5rem;
     }
     
     &:nth-child(3n+2) {
       margin-left: 22.5rem;
+    
+      @media screen and (max-width: @screen-md) {
+        margin-left: 4rem;
+      }
     }
     
     &:nth-child(3n+3) {
       margin-left: 18.5rem;
-    }
-    
-    &:nth-child(4) {
     
       @media screen and (max-width: @screen-md) {
-        order: 5;
-      }
-    }
-    
-    &:nth-child(5) {
-    
-      @media screen and (max-width: @screen-md) {
-        order: 4;
-      }
-    }
-    
-    &:nth-child(6) {
-    
-      @media screen and (max-width: @screen-md) {
-        order: 6;
+        margin-left: 2.5rem;
       }
     }
     
     &:nth-child(n+4) {
       margin-top: 6.5rem;
+    
+      @media screen and (max-width: @screen-md) {
+        margin-top: 10.5rem;
+      }
     
       @media screen and (max-width: @screen-sm) {
         margin-top: 6rem;
@@ -77,6 +75,10 @@
       width: 14rem;
       height: 11.2rem;
       margin-bottom: 2.2rem;
+    
+      @media screen and (max-width: @screen-md) {
+        margin-bottom: 0;
+      }
     }
     
     &--angular {
@@ -85,7 +87,7 @@
         background: url(../img/tech-angular.png) no-repeat;
     
         @media screen and (max-width: @screen-md) {
-          background-position: center bottom;
+          background-position: center center;
         }
       }
     }
@@ -97,7 +99,7 @@
         background-position: left center;
     
         @media screen and (max-width: @screen-md) {
-          background-position: center bottom;
+          background-position: center center;
         }
       }
     }
@@ -109,7 +111,7 @@
         background-position: left center;
     
         @media screen and (max-width: @screen-md) {
-          background-position: center bottom;
+          background-position: center center;
         }
       }
     }
@@ -122,7 +124,7 @@
         background-position: left center;
     
         @media screen and (max-width: @screen-md) {
-          background-position: center bottom;
+          background-position: center center;
         }
       }
     }
@@ -134,7 +136,7 @@
         background-position: left center;
     
         @media screen and (max-width: @screen-md) {
-          background-position: center bottom;
+          background-position: center center;
         }
       }
     }
@@ -146,7 +148,7 @@
         background-position: left center;
     
         @media screen and (max-width: @screen-md) {
-          background-position: center bottom;
+          background-position: center center;
         }
       }
     }
