@@ -4,6 +4,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 8.6rem;
     margin-bottom: 4.9rem;
     
@@ -83,8 +84,8 @@
       content: '';
       display: block;
       width: 14rem;
-      height: 11.2rem;
       margin-bottom: 2.2rem;
+      flex: 0 0 auto;
     
       @media screen and (max-width: @screen-md) {
         margin-bottom: 0;
@@ -95,6 +96,8 @@
       
       &:before {
         background: url(../img/tech-angular.png) no-repeat;
+        background-size: contain;
+        height: 10.6rem;
     
         @media screen and (max-width: @screen-md) {
           background-position: center center;
@@ -107,6 +110,8 @@
       &:before {
         background: url(../img/tech-react.png) no-repeat;
         background-position: left center;
+        background-size: contain;
+        height: 8.8rem;
     
         @media screen and (max-width: @screen-md) {
           background-position: center center;
@@ -119,6 +124,8 @@
       &:before {
         background: url(../img/tech-d3.png) no-repeat;
         background-position: left center;
+        background-size: contain;
+        height: 9.6rem;
     
         @media screen and (max-width: @screen-md) {
           background-position: center center;
@@ -128,13 +135,21 @@
     
     &--meteor {
       
+      
       &:before {
         width: 22.4rem;
+        height: 5.3rem;
         background: url(../img/tech-meteor.png) no-repeat;
         background-position: left center;
+        background-size: contain;
+        margin-top: 3rem;
     
         @media screen and (max-width: @screen-md) {
           background-position: center center;
+        }
+    
+        @media screen and (max-width: @screen-sm) {
+          margin-top: 0;
         }
       }
     }
@@ -144,6 +159,8 @@
       &:before {
         background: url(../img/tech-html.png) no-repeat;
         background-position: left center;
+        background-size: contain;
+        height: 11.2rem;
     
         @media screen and (max-width: @screen-md) {
           background-position: center center;
@@ -156,6 +173,8 @@
       &:before {
         background: url(../img/tech-css.png) no-repeat;
         background-position: left center;
+        background-size: contain;
+        height: 11.2rem;
     
         @media screen and (max-width: @screen-md) {
           background-position: center center;

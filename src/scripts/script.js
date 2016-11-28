@@ -11,19 +11,17 @@ $('a[href*=#]').click(function () {
   }
 });
 
-if ($(window).width() < 1200 && $(window).width() > 900) {
-  $(function () {
-      $(window).bind('resize', function () {
-          resizeMe();
-      }).trigger('resize');
-  });
-}
-
-
+$(function () {
+    $(window).bind('resize', function () {
+      if ($(window).width() < 1200 && $(window).width() > 900) {
+        resizeMe();
+      }
+    }).trigger('resize');
+});
 
 var resizeMe = function () {
     //Standard width, for which the body font size is correct
-    var preferredWidth = 1200;
+    var preferredWidth = 1280;
     //Base font size for the page
     var fontsize = 10;
 

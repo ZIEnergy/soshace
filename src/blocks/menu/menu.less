@@ -45,10 +45,18 @@
     }
     
     &:nth-child(n+2) {
-      margin-left: 2.8rem;
+      margin-left: 1.1rem;
     
       @media screen and (max-width: @screen-md) {
         margin-left: 0;
+      }
+    }
+    
+    &:nth-child(n+8) {
+      display: none;
+    
+      @media screen and (max-width: @screen-sm) {
+        display: block;
       }
     }
   }
