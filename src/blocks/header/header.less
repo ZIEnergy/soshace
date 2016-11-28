@@ -6,8 +6,24 @@
   z-index: 8;
     
   @media screen and (max-width: @screen-sm) {
-    position: fixed;
+    position: absolute;
     padding: 2.4rem 0;
+  }
+  
+  &--active {
+    
+    @media screen and (max-width: @screen-md) {
+      position: fixed;
+    }
+    
+    @media screen and (max-width: @screen-md) {
+      background: rgba(35, 54, 77, .9);
+    }
+    
+    .menu__button-item {
+      background: #fff;
+      opacity: 1;
+    }
   }
   
   &__wrapper {

@@ -85,12 +85,21 @@
     background: rgba(255, 255, 255, .9);
     padding: 4rem 6rem 6.9rem 7.9rem;
     flex-direction: column;
+    align-items: center;
     
     .contacts-content__item {
       color: #000;
     }
     
     .contacts-content__section {
+        
+      @media screen and (max-width: @screen-sm) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: none;
+      }
       
       &:nth-child(n+2) {
         margin-top: 4rem;
@@ -99,46 +108,58 @@
     }
   
     .contacts-content__presentation {
+      display: flex;
+      align-items: center;
+      margin-left: -3.5rem;
+        
+      @media screen and (max-width: @screen-md) {
+        justify-content: center;
+        margin-left: 0;
+      }
 
       &:before {
         background: url(../img/icon-adobe-blue.png) no-repeat;
+        flex: 0 0 auto;
+        background-size: contain;
+        position: static;
+        margin-right: 1rem;        
       }
     }
     
     .socials__item {
       
       &--fb {
-        background: url(../img/icon-fb-blue.png) no-repeat;
+        background: url(../img/facebook.svg) no-repeat;
         background-size: cover;
       }
       
       &--linkedin {
-        background: url(../img/icon-li-blue.png) no-repeat;
+        background: url(../img/linkedin.svg) no-repeat;
         background-size: cover;
       }
       
       &--github {
-        background: url(../img/icon-github-blue.png) no-repeat;
+        background: url(../img/github.svg) no-repeat;
         background-size: cover;
       }
       
       &--twitter {
-        background: url(../img/icon-twitter-blue.png) no-repeat;
+        background: url(../img/twitter.svg) no-repeat;
         background-size: cover;
       }
       
       &--google {
-        background: url(../img/icon-google-blue.png) no-repeat;
+        background: url(../img/google.svg) no-repeat;
         background-size: cover;
       }
       
       &--instagram {
-        background: url(../img/icon-instagram-blue.png) no-repeat;
+        background: url(../img/instagram.svg) no-repeat;
         background-size: cover;
       }
       
       &--youtube {
-        background: url(../img/icon-youtube-blue.png) no-repeat;
+        background: url(../img/youtube.svg) no-repeat;
         background-size: cover;
       }
     }

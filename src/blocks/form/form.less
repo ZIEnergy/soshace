@@ -50,7 +50,9 @@
     bottom: 11.4rem;
         
     @media screen and (max-width: @screen-sm) {
-      position: static;
+      position: relative;
+      right: auto;
+      bottom: auto;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -69,8 +71,8 @@
   
   &__upload-icon {
     width: 2rem;
-    height: 4.9rem;
-    background: url(../img/clip.png) no-repeat;
+    height: 5rem;
+    background: url(../img/clip.svg) no-repeat;
     background-size: cover;
   }
   

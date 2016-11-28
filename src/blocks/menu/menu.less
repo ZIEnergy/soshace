@@ -3,25 +3,25 @@
   align-items: center;
     
   @media screen and (max-width: @screen-md) {
-    position: absolute;
+    position: fixed;
     width: 100%;
     left: 0;
     top: 0;
-    padding-top: 8.1rem;
+    padding-top: 8rem;
   }
     
   @media screen and (max-width: @screen-sm) {
-    padding-top: 7.8rem;
+    padding-top: 8.3rem;
   }
   
   &__links {
     
     @media screen and (max-width: @screen-md) {
       flex-direction: column;
-      background: rgba(35, 54, 77, .9);
       width: 100%;
       padding: 1.4rem 0 4rem;
       display: none;
+      background: rgba(35, 54, 77, .9);
     }
   }
   
@@ -45,17 +45,25 @@
     }
     
     &:nth-child(n+2) {
-      margin-left: 1.1rem;
+      margin-left: 2.8rem;
     
       @media screen and (max-width: @screen-md) {
         margin-left: 0;
       }
     }
     
-    &:nth-child(n+8) {
+    &:nth-child(7) {
       display: none;
     
-      @media screen and (max-width: @screen-sm) {
+      @media screen and (max-width: @screen-md) {
+        display: block;
+      }
+    }
+    
+    &:nth-child(8) {
+      display: none;
+    
+      @media screen and (max-width: @screen-md) {
         display: block;
       }
     }
@@ -66,17 +74,70 @@
     
     @media screen and (max-width: @screen-md) {
       display: block;
-      background: url(../img/menu.svg) no-repeat;
-      background-size: cover;
       width: 2.9rem;
       height: 2.3rem;
-      position: absolute;
+      position: fixed;
       right: 4.4rem;
       top: 2.9rem;
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
     }
-    
+
     @media screen and (max-width: @screen-sm) {
       right: 2rem;
+    }
+    
+    &--fixed {
+      
+      .menu__button-item {
+        background: #000;
+        opacity: .3;
+      }
+    }
+    
+    &--active {
+      
+      .menu__button-item {
+        
+        &:nth-child(1) {
+          top: 1rem;
+          transform: rotate(135deg);
+        }
+        
+        &:nth-child(2) {
+          opacity: 0;
+          left: -4rem;
+        }
+        
+        &:nth-child(3) {
+          top: 1rem;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+  
+  
+    
+  &__button-item {
+    position: absolute;
+    width: 2.9rem;
+    height: .3rem;
+    background: #fff;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    
+    &:nth-child(1) {
+      top: 0;
+    }
+    
+    &:nth-child(2) {
+      top: 1rem;
+    }
+    
+    &:nth-child(3) {
+      top: 2rem;
     }
   }
 }
