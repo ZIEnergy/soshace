@@ -11,6 +11,12 @@ if ($(window).width() < 901) {
           arrows: false,
           dots: true
         }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          dots: true
+        }
       }
     ]
   });

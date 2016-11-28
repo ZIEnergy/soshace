@@ -1,5 +1,9 @@
 .portfolio {
   padding-bottom: 10.2rem;
+    
+    @media screen and (max-width: @screen-md) {
+      padding-bottom: 11.2rem;
+    }
   
   &__portfolio-list {
     margin-top: 8rem;
@@ -7,6 +11,10 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    
+    @media screen and (max-width: @screen-md) {
+      margin-bottom: 4.8rem;
+    }
   }
   
   &__list-item {

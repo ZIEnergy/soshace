@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 10rem;
+    padding-left: 0;
   }
     
   @media screen and (max-width: @screen-sm) {
@@ -21,6 +22,7 @@
         
       @media screen and (max-width: @screen-md) {
         margin-top: 3rem;
+        margin-left: 0;
       }
     }
   }
@@ -53,6 +55,11 @@
     margin-top: 2.5rem;
     position: relative;
     
+    @media screen and (max-width: @screen-md) {
+      margin-top: 1rem;
+      margin-left: 3rem;
+    }
+    
     &:before {
       content: '';
       display: block;
@@ -65,7 +72,7 @@
       top: .3rem;
         
       @media screen and (max-width: @screen-md) {
-        left: 5rem;
+        left: 4rem;
       }
     }
         

@@ -102,10 +102,18 @@
       
       &:nth-child(3) {
         order: 2;
+    
+        @media screen and (max-width: @screen-md) {
+          order: 1;
+        }
       }
       
       &:nth-child(4) {
         order: 1;
+    
+        @media screen and (max-width: @screen-md) {
+          order: 2;
+        }
       }
     }
     
