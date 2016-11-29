@@ -21,7 +21,7 @@ $(".menu__button").click(function(e){e.preventDefault(),$(".menu__links").slideT
 
 
 
-$(window).width()<960&&$(".portfolio-list").slick({slidesToShow:1,slidesToScroll:1,variableWidth:!1,arrows:!0,responsive:[{breakpoint:480,settings:{arrows:!1,dots:!0}},{breakpoint:900,settings:{dots:!0}}]});
+$(window).width()<960&&$(".portfolio-list").slick({slidesToShow:1,slidesToScroll:1,variableWidth:!1,arrows:!0,responsive:[{breakpoint:568,settings:{arrows:!1,dots:!0}},{breakpoint:900,settings:{dots:!0}}]});
 
 
 

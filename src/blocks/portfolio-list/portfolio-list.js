@@ -6,7 +6,7 @@ if ($(window).width() < 960) {
     arrows: true,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 568,
         settings: {
           arrows: false,
           dots: true
