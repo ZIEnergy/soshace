@@ -1,4 +1,4 @@
-if ($(window).width() < 901) {
+if ($(window).width() < 960) {
   $('.portfolio-list').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

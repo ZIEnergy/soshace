@@ -2,22 +2,33 @@
   background: @color-second;
   
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 8.6rem;
     margin-bottom: 4.9rem;
     
-    @media screen and (max-width: @screen-md) {
-      padding-left: 2rem;
-      margin-bottom: 5.9rem;
+    @media screen and (max-width: @screen-lg) {
+      padding: 0 2rem;
     }
     
     @media screen and (max-width: @screen-sm) {
       flex-direction: column;
       align-items: center;
-      padding-left: 0;
       margin-top: 5rem;
+    }
+  }
+  
+  &__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    &:nth-child(n+2) {
+      margin-top: 6.5rem;
+    }
+    
+    @media screen and (max-width: @screen-sm) {
+      padding: 0 2rem;
+      flex-direction: column;
+      align-items: center;
     }
   }
   
@@ -26,10 +37,11 @@
     font-family: @font-first;
     font-size: 2.2rem;
     font-weight: 300;
+    display: inline-block;
     display: flex;
     line-height: 11rem;
-    min-height: 11.2rem;
-    min-width: 21.5rem;
+    width: 22.5rem;
+    flex: 0 0 auto;
     
     @media screen and (max-width: @screen-md) {
       flex-direction: column;
@@ -37,46 +49,14 @@
       line-height: 5rem;
     }
     
-    &:nth-child(3n+2) {
-      margin-left: 22.5rem;
-    
-      @media screen and (max-width: @screen-md) {
-        margin-left: 4rem;
-      }
-    
-      @media screen and (max-width: @screen-sm) {
-        margin-left: 0;
-      }
+    @media screen and (max-width: @screen-sm) {
+      margin-bottom: 6rem;
     }
     
-    &:nth-child(3n+3) {
-      margin-left: 18.5rem;
-    
-      @media screen and (max-width: @screen-md) {
-        margin-left: 2.5rem;
-      }
+    &:last-child {
     
       @media screen and (max-width: @screen-sm) {
-        margin-left: 0;
-      }
-    }
-    
-    &:nth-child(n+4) {
-      margin-top: 6.5rem;
-    
-      @media screen and (max-width: @screen-md) {
-        margin-top: 10.6rem;
-      }
-    
-      @media screen and (max-width: @screen-sm) {
-        margin-top: 6rem;
-      }
-    }
-    
-    &:nth-child(n+2) {
-    
-      @media screen and (max-width: @screen-sm) {
-        margin-top: 4.1rem;
+        margin-bottom: 0;
       }
     }
     
@@ -149,7 +129,7 @@
         }
     
         @media screen and (max-width: @screen-sm) {
-          margin-top: 0;
+          margin-top: -2rem;
         }
       }
     }

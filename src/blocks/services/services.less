@@ -2,11 +2,16 @@
   
   &__list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 6.1rem;
     margin-bottom: 6.5rem;
     
-    @media screen and (max-width: @screen-sm) {
+    @media screen and (max-width: @screen-lg) {
+      padding: 0 2rem;
+    }
+    
+    @media screen and (max-width: @screen-xs) {
       margin-top: 3.5rem;
     }
   }
@@ -22,13 +27,13 @@
     flex: 0 0 auto;
     
     @media screen and (max-width: @screen-md) {
-      width: 33.3%;
+      width: 33.33%;
       flex-direction: column;
       text-align: center;
       padding: 0 4rem;
     }
     
-    @media screen and (max-width: @screen-sm) {
+    @media screen and (max-width: @screen-xs) {
       width: 100%;
       padding: 0;
     }
@@ -46,38 +51,18 @@
       }
     }
     
-    &:nth-child(3n+2) {
-      margin-left: 14rem;
-    
-      @media screen and (max-width: @screen-md) {
-        margin-left: 0;
-      }
-    }
-    
-    &:nth-child(3n+3) {
-      margin-left: 10.3rem;
-    
-      @media screen and (max-width: @screen-md) {
-        margin-left: 0;
-      }
-    }
-    
     &:nth-child(n+2) {
     
-      @media screen and (max-width: @screen-sm) {
-        margin-top: 5rem;
+      @media screen and (max-width: @screen-xs) {
+        margin-top: 6rem;
       }
     }
     
     &:nth-child(n+4) {
       margin-top: 6.5rem;
     
-      @media screen and (max-width: @screen-md) {
-        margin-top: 10.1rem;
-      }
-    
-      @media screen and (max-width: @screen-sm) {
-        margin-top: 5rem;
+      @media screen and (max-width: @screen-xs) {
+        margin-top: 6rem;
       }
     }
     

@@ -1,13 +1,15 @@
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
     
-  @media screen and (max-width: @screen-md) {
+  @media screen and (max-width: @screen-lg) {
     padding: 0 1rem;
   }
   
   &__item {
-    margin-left: .3rem;
+//    margin-left: .3rem;
+    width: 33%;
     
     &:nth-child(n+4) {
       margin-top: .4rem;
