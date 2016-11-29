@@ -21,13 +21,13 @@ $(".menu__button").click(function(e){e.preventDefault(),$(".menu__links").slideT
 
 
 
-$(window).resize(function(){$(window).width()<961?$(".portfolio-list").hasClass("slick-initialized")||$(".portfolio-list").slick({slidesToShow:1,slidesToScroll:1,variableWidth:!1,arrows:!0,responsive:[{breakpoint:568,settings:{arrows:!1,dots:!0}},{breakpoint:960,settings:{dots:!0}}]}):$(".portfolio-list").hasClass("slick-initialized")&&$(".portfolio-list").slick("unslick")});
+$(window).width()<961&&$(".portfolio-list").slick({slidesToShow:1,slidesToScroll:1,variableWidth:!1,arrows:!0,responsive:[{breakpoint:568,settings:{arrows:!1,dots:!0}},{breakpoint:960,settings:{dots:!0}}]}),$(window).resize(function(){$(window).width()<961?$(".portfolio-list").hasClass("slick-initialized")||$(".portfolio-list").slick({slidesToShow:1,slidesToScroll:1,variableWidth:!1,arrows:!0,responsive:[{breakpoint:568,settings:{arrows:!1,dots:!0}},{breakpoint:960,settings:{dots:!0}}]}):$(".portfolio-list").hasClass("slick-initialized")&&$(".portfolio-list").slick("unslick")});
 
 
 
 
 $(".reviews__content").slick({arrows:!0,responsive:[{breakpoint:960,settings:{dots:!0}},{breakpoint:568,settings:{arrows:!1,dots:!0}}]});
-$(window).resize(function(){$(window).width()<961?$(".reviews-page__content").hasClass("slick-initialized")||$(".reviews-page__content").slick({slidesToShow:1,slidesToScroll:1,arrows:!0}):$(".reviews-page__content").hasClass("slick-initialized")&&$(".reviews-page__content").slick("unslick")});
+$(window).width()<961&&$(".reviews-page__content").slick({slidesToShow:1,slidesToScroll:1,arrows:!0}),$(window).resize(function(){$(window).width()<961?$(".reviews-page__content").hasClass("slick-initialized")||$(".reviews-page__content").slick({slidesToShow:1,slidesToScroll:1,arrows:!0}):$(".reviews-page__content").hasClass("slick-initialized")&&$(".reviews-page__content").slick("unslick")});
 
 
 
