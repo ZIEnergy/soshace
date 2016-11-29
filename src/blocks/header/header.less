@@ -5,19 +5,19 @@
   width: 100%;
   z-index: 8;
     
-  @media screen and (max-width: @screen-sm) {
+  @media screen and (max-width: @screen-xs) {
     position: absolute;
     padding: 2.4rem 0;
   }
   
   &--active {
     
-    @media screen and (max-width: @screen-md) {
+    @media screen and (max-width: @screen-lg) {
       position: fixed;
     }
     
-    @media screen and (max-width: @screen-md) {
-      background: rgba(35, 54, 77, .9);
+    @media screen and (max-width: @screen-lg) {
+//      background: rgba(35, 54, 77, .9);
     }
     
     .menu__button-item {
@@ -31,11 +31,11 @@
     align-items: center;
     justify-content: space-between;
     
-    @media screen and (max-width: @screen-md) {
+    @media screen and (max-width: @screen-lg) {
       padding: 0 9.4rem 0 4.2rem;
     }
     
-    @media screen and (max-width: @screen-sm) {
+    @media screen and (max-width: @screen-xs) {
       padding: 0 2rem;
     }
   }
@@ -43,7 +43,7 @@
   &__button {
     z-index: 9;
     
-    @media screen and (max-width: @screen-sm) {
+    @media screen and (max-width: @screen-xs) {
       display: none;
     }
   }

@@ -1,4 +1,4 @@
-$('a[href*=#]').click(function () {
+$('a.button').click(function () {
   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -11,7 +11,7 @@ $('a[href*=#]').click(function () {
   }
 });
 
-if ($(window).width() < 900) {
+if ($(window).width() < 1200) {
   $(document).scroll(function() {
     if($(document).scrollTop() > 29) {
       $('.menu__button').addClass('menu__button--fixed');
@@ -22,25 +22,25 @@ if ($(window).width() < 900) {
   });
 }
 
-$(function () {
-    $(window).bind('resize', function () {
-      if ($(window).width() < 1200 && $(window).width() > 900) {
-        resizeMe();
-      }
-    }).trigger('resize');
-});
-
-var resizeMe = function () {
-    //Standard width, for which the body font size is correct
-    var preferredWidth = 1280;
-    //Base font size for the page
-    var fontsize = 10;
-
-    var displayWidth = $(window).width();
-    var percentage = displayWidth / preferredWidth;
-    var newFontSize = fontsize * percentage;
-    $("html").css("font-size", newFontSize);
-};
+//$(function () {
+//    $(window).bind('resize', function () {
+//      if ($(window).width() < 1200 && $(window).width() > 900) {
+//        resizeMe();
+//      }
+//    }).trigger('resize');
+//});
+//
+//var resizeMe = function () {
+//    //Standard width, for which the body font size is correct
+//    var preferredWidth = 1280;
+//    //Base font size for the page
+//    var fontsize = 10;
+//
+//    var displayWidth = $(window).width();
+//    var percentage = displayWidth / preferredWidth;
+//    var newFontSize = fontsize * percentage;
+//    $("html").css("font-size", newFontSize);
+//};
 
 window.initMap = function() {
   var myLatLng = {lat: 59.9616116, lng: 30.3164647};
