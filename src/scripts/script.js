@@ -11,24 +11,24 @@ $('a[href*=#]').click(function () {
   }
 });
 
-if ($(window).width() < 900) {
-  $(document).scroll(function() {
-    if($(document).scrollTop() > 29) {
-      $('.menu__button').addClass('menu__button--fixed');
-    }
-    else {
-      $('.menu__button').removeClass('menu__button--fixed');
-    }
-  });
-}
+//if ($(window).width() < 900) {
+//  $(document).scroll(function() {
+//    if($(document).scrollTop() > 29) {
+//      $('.menu__button').addClass('menu__button--fixed');
+//    }
+//    else {
+//      $('.menu__button').removeClass('menu__button--fixed');
+//    }
+//  });
+//}
 
-$(function () {
-    $(window).bind('resize', function () {
-      if ($(window).width() < 1200 && $(window).width() > 900) {
-        resizeMe();
-      }
-    }).trigger('resize');
-});
+//$(function () {
+//    $(window).bind('resize', function () {
+//      if ($(window).width() < 1200 && $(window).width() > 900) {
+//        resizeMe();
+//      }
+//    }).trigger('resize');
+//});
 
 var resizeMe = function () {
     //Standard width, for which the body font size is correct
