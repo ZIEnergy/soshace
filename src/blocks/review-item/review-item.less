@@ -120,8 +120,13 @@
     &--short {
       width: 48rem;
         
-      @media screen and (max-width: @screen-md) {
+      @media screen and (max-width: @screen-lg) {
         width: 100%;
+        max-width: 40rem;
+      }
+        
+      @media screen and (max-width: @screen-md) {
+        max-width: none;
       }
     }
   }
@@ -225,7 +230,7 @@
   &--detailed {
     width: 104rem;
         
-    @media screen and (max-width: @screen-md) {
+    @media screen and (max-width: @screen-lg) {
       width: 100%;
     }
         
