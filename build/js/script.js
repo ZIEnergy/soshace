@@ -16,18 +16,18 @@ $(document).ready(function(){
 
 
 
-
 $(".menu__button").click(function(e){e.preventDefault(),$(".menu__links").slideToggle("fast").css("display","flex"),$(this).toggleClass("menu__button--active"),$(".body").toggleClass("body--active"),$(".header").toggleClass("header--active")});
 
 
 
-$(window).width()<960&&$(".portfolio-list").slick({slidesToShow:1,slidesToScroll:1,variableWidth:!1,arrows:!0,responsive:[{breakpoint:568,settings:{arrows:!1,dots:!0}},{breakpoint:900,settings:{dots:!0}}]});
+$(window).width()<960&&$(".portfolio-list").slick({slidesToShow:1,slidesToScroll:1,variableWidth:!1,arrows:!0,responsive:[{breakpoint:568,settings:{arrows:!1,dots:!0}},{breakpoint:960,settings:{dots:!0}}]});
 
 
 
 
-$(".reviews__content").slick({arrows:!0,responsive:[{breakpoint:900,settings:{dots:!0}},{breakpoint:480,settings:{arrows:!1,dots:!0}}]});
+$(".reviews__content").slick({arrows:!0,responsive:[{breakpoint:960,settings:{dots:!0}},{breakpoint:568,settings:{arrows:!1,dots:!0}}]});
 $(window).width()<901&&$(".reviews-page__content").slick({slidesToShow:1,slidesToScroll:1,arrows:!0});
+
 
 
 

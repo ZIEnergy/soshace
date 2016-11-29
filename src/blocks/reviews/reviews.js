@@ -2,13 +2,13 @@ $('.reviews__content').slick({
   arrows: true,
   responsive: [
     {
-      breakpoint: 900,
+      breakpoint: 960,
       settings: {
         dots: true
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 568,
       settings: {
         arrows: false,
         dots: true

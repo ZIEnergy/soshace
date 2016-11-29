@@ -13,7 +13,7 @@ if ($(window).width() < 960) {
         }
       },
       {
-        breakpoint: 900,
+        breakpoint: 960,
         settings: {
           dots: true
         }
