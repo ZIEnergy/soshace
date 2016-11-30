@@ -12,5 +12,28 @@ html(lang='en')
           +contacts-content('map__contacts', 'contacts-content--white')
     +feedback
     +footer
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCTuyWoKurdTrbHR1q4UpG6Ov9sLXkFPxQ&callback=initMap', async='', defer='')
     include ../templates/scripts.pug
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCTuyWoKurdTrbHR1q4UpG6Ov9sLXkFPxQ&callback=initMap', async, defer)
+    script.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: {lat: 59.9616116, lng: 30.3164647},
+          scrollwheel: false,
+          scaleControl: true,
+        });
+
+        if ($(window).width() < 961) {
+          map.setCenter({lat: 59.9613295, lng: 30.3210396});
+        };
+
+        if ($(window).width() < 701) {
+          map.setCenter({lat: 59.9623295, lng: 30.3210396});
+        };
+
+        var marker = new google.maps.Marker({
+          map: map,
+          position: {lat: 59.9624924, lng: 30.3212176},
+          icon: 'img/marker.svg',
+        });
+      };
