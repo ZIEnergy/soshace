@@ -1,6 +1,7 @@
 mixin review-item(photo, date, project, projectLink, projectStage, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass, additionalClass2)
   .review-item(class=additionalClass, class=additionalClass2)
-    img.review-item__author-photo(src="img/"+photo, alt="Photo")
+    a.review-item__photo-link(href="review.html")
+      img.review-item__author-photo(src="img/"+photo, alt="Photo")
     .review-item__content
       .review-item__info
         .review-item__date.review-item__info-text #{date}
@@ -21,7 +22,8 @@ mixin review-item(photo, date, project, projectLink, projectStage, client, emplo
       
 mixin review-item--nolink(photo, date, project, client, employee, star1, star2, star3, star4, star5, rating, reviewContent, additionalClass, additionalClass2)
   .review-item(class=additionalClass, class=additionalClass2)
-    img.review-item__author-photo(src="img/"+photo, alt="Photo")
+    a.review-item__photo-link(href="review.html")
+      img.review-item__author-photo(src="img/"+photo, alt="Photo")
     .review-item__content
       .review-item__info
         .review-item__date.review-item__info-text #{date}

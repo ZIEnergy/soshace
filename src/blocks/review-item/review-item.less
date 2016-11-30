@@ -23,19 +23,28 @@
     }
   }
   
-  &__author-photo {
+  &__photo-link {
     display: block;
-    margin-right: 4.2rem;
+    flex: 0 0 auto;
         
     @media screen and (max-width: @screen-sm) {
       margin: 0 auto 6rem;
     }
-    
+  }
+  
+  &__author-photo {
+    display: block;
+    flex: 0 0 auto;
   }
   
   &__content {
     width: 100%;
     margin-top: -.7rem;
+    margin-left: 4.2rem;
+        
+    @media screen and (max-width: @screen-sm) {
+      margin-left: 0;
+    }
   }
   
   &__info {
@@ -79,6 +88,10 @@
     text-transform: uppercase;
     color: #000;
     display: block;
+    
+    &:hover {
+      text-decoration: none;
+    }
   }
   
   &__info-text {
@@ -137,6 +150,11 @@
     margin-top: 1.4rem;
     color: #000;
     display: block;
+    .transition;
+    
+    &:hover {
+      text-decoration: none;
+    }
     
     @media screen and (max-width: @screen-sm) {
       text-align: center;
@@ -150,6 +168,10 @@
       margin-left: 0;
       margin-top: 0!important;
       padding-top: 3.3rem!important;
+    }
+    
+    .review-item__content {
+      margin-left: 0;
     }
   }
   

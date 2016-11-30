@@ -13,7 +13,7 @@ html(lang='en')
     +feedback
     +footer
     include ../templates/scripts.pug
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCTuyWoKurdTrbHR1q4UpG6Ov9sLXkFPxQ&callback=initMap', async, defer)
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCTuyWoKurdTrbHR1q4UpG6Ov9sLXkFPxQ&callback=initMap&language=en', async, defer)
     script.
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
