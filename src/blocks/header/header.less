@@ -18,8 +18,13 @@
     
     .menu {
       height: 100%;
-    }
+      padding-top: 0;
+      margin-top: 8rem;
     
+      @media screen and (max-width: @screen-xs) {
+        margin-top: 8.3rem;
+      }
+    }
     .menu__button-item {
       background: #fff;
       opacity: 1;
