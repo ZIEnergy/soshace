@@ -11,13 +11,13 @@ $(document).ready(function(){
 
 
 
+$(".header__menu-button").click(function(e){e.preventDefault(),$(this).toggleClass("header__menu-button--active"),$(".menu__links").toggleClass("menu__links--active"),$(".body").toggleClass("body--active"),$(".header").toggleClass("header--active")});
 
 
 
 
 
 
-$(".menu__button").click(function(e){e.preventDefault(),$(".menu__links").slideToggle("fast").css("display","flex"),$(this).toggleClass("menu__button--active"),$(".body").toggleClass("body--active"),$(".header").toggleClass("header--active")});
 
 
 

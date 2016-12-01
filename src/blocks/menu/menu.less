@@ -5,6 +5,7 @@
   @media screen and (max-width: @screen-lg) {
     position: fixed;
     width: 100%;
+    height: 100%;
     left: 0;
     top: 0;
     padding-top: 8rem;
@@ -31,6 +32,10 @@
       display: none;
       background: rgba(35, 54, 77, .9);
       overflow: auto;
+    }
+    
+    &--active {
+      display: flex;
     }
   }
   
@@ -76,78 +81,6 @@
       @media screen and (max-width: @screen-lg) {
         display: block;
       }
-    }
-  }
-  
-  &__button {
-    display: none;
-    
-    @media screen and (max-width: @screen-lg) {
-      display: block;
-      width: 2.9rem;
-      height: 2.3rem;
-      position: fixed;
-      right: 4.4rem;
-      top: 2.9rem;
-      transform: rotate(0deg);
-      transition: .5s ease-in-out;
-    }
-
-    @media screen and (max-width: @screen-xs) {
-      right: 2rem;
-    }
-    
-    &--fixed {
-      
-      .menu__button-item {
-        background: #000;
-        opacity: .3;
-      }
-    }
-    
-    &--active {
-      
-      .menu__button-item {
-        
-        &:nth-child(1) {
-          top: 1rem;
-          transform: rotate(135deg);
-        }
-        
-        &:nth-child(2) {
-          opacity: 0;
-          left: -4rem;
-        }
-        
-        &:nth-child(3) {
-          top: 1rem;
-          transform: rotate(-135deg);
-        }
-      }
-    }
-  }
-  
-  
-    
-  &__button-item {
-    position: absolute;
-    width: 2.9rem;
-    height: .3rem;
-    background: #fff;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-    
-    &:nth-child(1) {
-      top: 0;
-    }
-    
-    &:nth-child(2) {
-      top: 1rem;
-    }
-    
-    &:nth-child(3) {
-      top: 2rem;
     }
   }
 }
