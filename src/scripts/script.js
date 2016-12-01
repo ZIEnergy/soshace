@@ -1,12 +1,17 @@
-$('.header__menu-button').click(function(e) {
+var menuButton = $('#menu-button');
+var menuLinks = $('.menu__links');
+var body = $('.body');
+var header = $('.header');
+
+menuButton.click(function(e) {
   e.preventDefault();
-  $(this).toggleClass('header__menu-button--active');
-  $('.menu__links').toggleClass('menu__links--active');
-  $('.body').toggleClass('body--active');
-  $('.header').toggleClass('header--active');
+  menuButton.toggleClass('header__menu-button--active');
+  menuLinks.toggleClass('menu__links--active');
+  body.toggleClass('body--active');
+  header.toggleClass('header--active');
 });
 
-if ($(window).width() < 961) {
+function portfolioSlider() {
   $('.portfolio-list').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -30,30 +35,14 @@ if ($(window).width() < 961) {
   });
 }
 
+if ($(window).width() < 961) {
+  portfolioSlider();
+}
+
 $(window).resize(function() {
   if ($(window).width() < 961) {
     if (!$('.portfolio-list').hasClass('slick-initialized')) {
-      $('.portfolio-list').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: false,
-        arrows: true,
-        responsive: [
-          {
-            breakpoint: 568,
-            settings: {
-              arrows: false,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 960,
-            settings: {
-              dots: true
-            }
-          }
-        ]
-      });
+      portfolioSlider();
     }
   }
   else {
@@ -82,7 +71,8 @@ $('.reviews__content').slick({
   ]
 });
 
-if ($(window).width() < 961) {
+
+function reviewSlider() {
   $('.reviews-page__content').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -90,14 +80,14 @@ if ($(window).width() < 961) {
   });
 }
 
+if ($(window).width() < 961) {
+  reviewSlider();
+}
+
 $(window).resize(function() {
   if ($(window).width() < 961) {
     if (!$('.reviews-page__content').hasClass('slick-initialized')) {
-      $('.reviews-page__content').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true
-      });
+      reviewSlider();
     }
   }
   else {
@@ -136,3 +126,7 @@ if ($(window).width() < 1200) {
     }
   });
 }
+
+$(function() {
+    FastClick.attach(document.body);
+});
