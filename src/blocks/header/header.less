@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 8;
     
-  @media screen and (max-width: @screen-xs) {
+  @media screen and (max-width: @screen-sm) {
     position: absolute;
     padding: 2.4rem 0;
   }
@@ -16,13 +16,31 @@
       position: fixed;
     }
     
-    .menu {
-      height: 100%;
+    @media screen and (max-width: @screen-sm) and (orientation: landscape) {
+      top: -8.3rem;
     }
     
-    .menu__button-item {
+    .menu {
+      height: 100%;
+      padding-top: 0;
+      border-top: 8rem solid transparent;
+    
+      @media screen and (max-width: @screen-xs) {
+        border-top: 8.3rem solid transparent;
+      }
+    
+      @media screen and (max-width: @screen-sm) and (orientation: landscape) {
+        border-top: 0;
+      }
+    }
+    
+    .header__menu-button-item {
       background: #fff;
       opacity: 1;
+    }
+    
+    .menu__links {
+      
     }
   }
   
@@ -50,5 +68,78 @@
   
   &__logo {
     z-index: 9;
+  }
+  
+  &__menu-button {
+    display: none;
+    
+    @media screen and (max-width: @screen-lg) {
+      display: block;
+      width: 2.9rem;
+      height: 2.3rem;
+      position: fixed;
+      right: 4.4rem;
+      top: 2.9rem;
+      transform: rotate(0deg);
+      z-index: 20;
+      transition: .5s ease-in-out;
+    }
+
+    @media screen and (max-width: @screen-xs) {
+      right: 2rem;
+    }
+    
+    &--fixed {
+      
+      .header__menu-button-item {
+        background: #000;
+        opacity: .3;
+      }
+    }
+    
+    &--active {
+      
+      .header__menu-button-item {
+        
+        &:nth-child(1) {
+          top: 1rem;
+          transform: rotate(135deg);
+        }
+        
+        &:nth-child(2) {
+          opacity: 0;
+          left: -4rem;
+        }
+        
+        &:nth-child(3) {
+          top: 1rem;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+  
+  
+    
+  &__menu-button-item {
+    position: absolute;
+    width: 2.9rem;
+    height: .3rem;
+    background: #fff;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    
+    &:nth-child(1) {
+      top: 0;
+    }
+    
+    &:nth-child(2) {
+      top: 1rem;
+    }
+    
+    &:nth-child(3) {
+      top: 2rem;
+    }
   }
 }

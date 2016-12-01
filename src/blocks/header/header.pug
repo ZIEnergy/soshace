@@ -2,5 +2,9 @@ mixin header(additionalClass)
   .header(class=additionalClass)
     .wrapper.header__wrapper
       +logo('header__logo')
+      a.header__menu-button(href="#")
+        .header__menu-button-item
+        .header__menu-button-item
+        .header__menu-button-item
       +menu
       +button('button--small', 'header__button')

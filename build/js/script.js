@@ -11,13 +11,13 @@ $(document).ready(function(){
 
 
 
+$(".header__menu-button").click(function(e){e.preventDefault(),$(this).toggleClass("header__menu-button--active"),$(".menu__links").toggleClass("menu__links--active"),$(".body").toggleClass("body--active"),$(".header").toggleClass("header--active")});
 
 
 
 
 
 
-$(".menu__button").click(function(e){e.preventDefault(),$(".menu__links").slideToggle("fast").css("display","flex"),$(this).toggleClass("menu__button--active"),$(".body").toggleClass("body--active"),$(".header").toggleClass("header--active")});
 
 
 $(window).width()<961&&$(".portfolio-list").slick({slidesToShow:1,slidesToScroll:1,variableWidth:!1,arrows:!0,responsive:[{breakpoint:568,settings:{arrows:!1,dots:!0}},{breakpoint:960,settings:{dots:!0}}]}),$(window).resize(function(){$(window).width()<961?$(".portfolio-list").hasClass("slick-initialized")||$(".portfolio-list").slick({slidesToShow:1,slidesToScroll:1,variableWidth:!1,arrows:!0,responsive:[{breakpoint:568,settings:{arrows:!1,dots:!0}},{breakpoint:960,settings:{dots:!0}}]}):$(".portfolio-list").hasClass("slick-initialized")&&$(".portfolio-list").slick("unslick")});
