@@ -21,3 +21,9 @@ if ($(window).width() < 1200) {
     }
   });
 }
+
+window.sr = ScrollReveal();
+sr.reveal('.technologies__item', { 
+  duration: 200
+//  delay: 1000
+}, 50);
