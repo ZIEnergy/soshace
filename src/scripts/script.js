@@ -128,10 +128,69 @@ if ($(window).width() < 1200) {
 }
 
 window.sr = ScrollReveal();
+
 sr.reveal('.technologies__item', { 
-  duration: 200
-//  delay: 1000
+  duration: 1000,
+  easing: 'ease-in-out',
+  distance: '2rem'
 }, 50);
+
+sr.reveal('.input', { 
+  duration: 1000,
+  easing: 'ease-in-out',
+  distance: '2rem'
+}, 50);
+
+sr.reveal('.form__upload', { 
+  duration: 1000,
+  delay: 500,
+  opacity: 0,
+  easing: 'ease-in-out',
+  distance: '0'
+}, 50);
+
+sr.reveal('.form__button', { 
+  duration: 1000,
+  opacity: 0,
+  easing: 'ease-in-out',
+  distance: '0'
+}, 50);
+
+sr.reveal('.contacts-content__item', { 
+  duration: 1000,
+  opacity: 0,
+  easing: 'ease-in-out',
+  distance: '0'
+}, 50);
+
+sr.reveal('.socials', { 
+  duration: 1000,
+  opacity: 0,
+  easing: 'ease-in-out',
+  distance: '0'
+});
+
+sr.reveal('.form__dscr', { 
+  duration: 1000,
+  opacity: 0,
+  easing: 'ease-in-out',
+  distance: '0'
+});
+
+sr.reveal('.section-link', { 
+  duration: 1000,
+  opacity: 0,
+  easing: 'ease-in-out',
+  distance: '0'
+});
+
+var $svg = $('svg').drawsvg();
+
+$svg.drawsvg('animate');
+
+
+
+
 
 $(function() {
     FastClick.attach(document.body);

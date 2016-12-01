@@ -29,6 +29,7 @@
     @media screen and (max-width: @screen-md) {
       width: 33.33%;
       flex-direction: column;
+      align-items: center;
       text-align: center;
       padding: 0 4rem;
     }
@@ -36,19 +37,6 @@
     @media screen and (max-width: @screen-xs) {
       width: 100%;
       padding: 0;
-    }
-    
-    &:before {
-      content: '';
-      display: block;
-      margin-right: 3.7rem;
-      width: 10rem;
-      height: 12.7rem;
-      flex: 0 0 auto;
-    
-      @media screen and (max-width: @screen-md) {
-        margin-right: 0;
-      }
     }
     
     &:nth-child(n+2) {
@@ -65,53 +53,15 @@
         margin-top: 6rem;
       }
     }
+  }
+  
+  &__item-icon {
+    width: 10rem;
+    flex: 0 0 auto;
+    margin-right: 3.7rem;
     
-    &--server {
-      
-      &:before {
-        background: url(../img/service-1.svg) no-repeat center;
-        background-size: contain;
-      }
-    }
-    
-    &--adaptive {
-      
-      &:before {
-        background: url(../img/service-2.svg) no-repeat center;
-        background-size: contain;
-      }
-    }
-    
-    &--client {
-      
-      &:before {
-        background: url(../img/service-3.svg) no-repeat center;
-        background-size: contain;
-      }
-    }
-    
-    &--webapps {
-      
-      &:before {
-        background: url(../img/service-4.svg) no-repeat center;
-        background-size: contain;
-      }
-    }
-    
-    &--prototypes {
-      
-      &:before {
-        background: url(../img/service-5.svg) no-repeat center;
-        background-size: contain;
-      }
-    }
-    
-    &--leased {
-      
-      &:before {
-        background: url(../img/service-6.svg) no-repeat center;
-        background-size: contain;
-      }
+    @media screen and (max-width: @screen-md) {
+      margin-right: 0;
     }
   }
 }
