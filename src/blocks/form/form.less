@@ -60,6 +60,62 @@
       align-items: center;
       margin-top: 3rem;
     }
+    
+    &--uploading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      right: -7.8rem;
+      bottom: 9.6rem;
+      
+      .form__upload-icon {
+        width: 5.8rem;
+        height: 7.5rem;
+        background: url(../img/document.png) no-repeat;
+        background-size: cover;
+        position: relative;
+        
+        &:before {
+          content: '';
+          display: block;
+          background: url(../img/load-circle.png) no-repeat;
+          background-size: cover;
+          width: 2.9rem;
+          height: 2.9rem;
+          position: absolute;
+          top: 3rem;
+          left: 1.4rem;
+          animation: spin 1.5s linear infinite;
+        }
+      }
+      
+      .form__upload-text {
+        display: none;
+      }
+    }
+    
+    &--uploaded {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      right: -7.8rem;
+      bottom: 9.6rem;
+      
+      .form__upload-icon {
+        width: 5.8rem;
+        height: 7.5rem;
+        background: url(../img/document.png) no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      
+      .form__upload-text {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 2rem;
+      }
+    }
   }
   
   &__upload-input {
