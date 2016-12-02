@@ -184,12 +184,32 @@ sr.reveal('.section-link', {
   distance: '0'
 });
 
-var $svg = $('svg').drawsvg();
+sr.reveal('.portfolio-item', { 
+  duration: 2000,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+}, 50);
 
-$svg.drawsvg('animate');
+//var $svg = $('svg').drawsvg();
+//
+//$svg.drawsvg('animate');
+
+//$('.odometer').html('83');
+
+setTimeout(function(){
+    $('.odometer').innerHTML = 83;
+}, 1000);
 
 
-
+//window.odometerOptions = {
+//  auto: false, // Don't automatically initialize everything with class 'odometer'
+//  selector: '.about-numbers__digits--projects', // Change the selector used to automatically find things to be animated
+//  format: 'd', // Change how digit groups are formatted, and how many digits are shown after the decimal point
+//  duration: 3000, // Change how long the javascript expects the CSS animation to take
+//  animation: 'count' // Count is a simpler animation method which just increments the value,
+//                     // use it when you're looking for something more subtle.
+//};
 
 
 $(function() {
