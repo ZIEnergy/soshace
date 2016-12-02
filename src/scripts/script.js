@@ -249,15 +249,22 @@ sr.reveal('.main .review-item__link', {
   distance: '10rem'
 }, 50);
 
-sr.reveal('.about-numbers__digits', { 
-  duration: 0,
-  distance: '0',
-  afterReveal: function (domEl) {
-    setTimeout(function(){
-      $('.about-numbers__digits--projects').html('83');
-  }, 1000);
-  },
+sr.reveal('.main .about-numbers__content', { 
+  duration: 2000,
+  origin: 'left',
+  delay: 100,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
 }, 50);
+
+sr.reveal('.main .services__item-content', { 
+  duration: 2000,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+}, 50);
+
 
 sr.reveal('.about-numbers__digits', { 
   duration: 0,
