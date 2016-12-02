@@ -1,15 +1,14 @@
 mixin about-numbers(additionalClass)
   ul.about-numbers(class=additionalClass)
     li.about-numbers__item
-      .about-numbers__digits.about-numbers__digits--blue.about-numbers__digits--years 2
+      .about-numbers__digits.about-numbers__digits--blue.about-numbers__digits--years.odometer 0
       .about-numbers__content years of productive work
     li.about-numbers__item
-      .about-numbers__digits.about-numbers__digits--green.about-numbers__digits--hours 7000
-        span.about-number__digits-plus +
+      .about-numbers__digits.about-numbers__digits--green.about-numbers__digits--hours.odometer 1000
       .about-numbers__content working hours
     li.about-numbers__item
-      .about-numbers__digits.about-numbers__digits--green.about-numbers__digits--customers 37
+      .about-numbers__digits.about-numbers__digits--green.about-numbers__digits--customers.odometer 10
       .about-numbers__content satisfied customers 
     li.about-numbers__item
-      .about-numbers__digits.about-numbers__digits--blue.about-numbers__digits--projects.odometer 23
+      .about-numbers__digits.about-numbers__digits--blue.about-numbers__digits--projects.odometer 10
       .about-numbers__content completed projects

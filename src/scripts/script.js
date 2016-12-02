@@ -129,6 +129,36 @@ if ($(window).width() < 1200) {
 
 window.sr = ScrollReveal();
 
+sr.reveal('.front__logo', { 
+  duration: 1000,
+  easing: 'ease-in-out',
+  distance: '2rem'
+});
+
+sr.reveal('.front__button', { 
+  duration: 1000,
+  easing: 'ease-in-out',
+  distance: '2rem'
+});
+
+sr.reveal('.form__button', { 
+  duration: 1000,
+  easing: 'ease-in-out',
+  distance: '2rem'
+});
+
+sr.reveal('.front__about-item', { 
+  duration: 1000,
+  easing: 'ease-in-out',
+  distance: '2rem'
+}, 50);
+
+sr.reveal('.main .section-header', { 
+  duration: 1000,
+  easing: 'ease-in-out',
+  distance: '2rem'
+});
+
 sr.reveal('.technologies__item', { 
   duration: 1000,
   easing: 'ease-in-out',
@@ -149,26 +179,19 @@ sr.reveal('.form__upload', {
   distance: '0'
 }, 50);
 
-sr.reveal('.form__button', { 
+sr.reveal('.main .contacts-content__item', { 
   duration: 1000,
   opacity: 0,
   easing: 'ease-in-out',
   distance: '0'
 }, 50);
 
-sr.reveal('.contacts-content__item', { 
+sr.reveal('.main .socials', { 
   duration: 1000,
   opacity: 0,
   easing: 'ease-in-out',
   distance: '0'
 }, 50);
-
-sr.reveal('.socials', { 
-  duration: 1000,
-  opacity: 0,
-  easing: 'ease-in-out',
-  distance: '0'
-});
 
 sr.reveal('.form__dscr', { 
   duration: 1000,
@@ -191,25 +214,70 @@ sr.reveal('.portfolio-item', {
   distance: '10rem'
 }, 50);
 
-//var $svg = $('svg').drawsvg();
-//
-//$svg.drawsvg('animate');
+sr.reveal('.main .review-item__photo-link', { 
+  duration: 2000,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+}, 50);
 
-//$('.odometer').html('83');
+sr.reveal('.main .review-item__info-item', { 
+  duration: 2000,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+}, 50);
 
-setTimeout(function(){
-    $('.odometer').innerHTML = 83;
-}, 1000);
+sr.reveal('.main .review-item__evaluation', { 
+  duration: 2000,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+}, 50);
 
+sr.reveal('.main .review-item__dscr', { 
+  duration: 2000,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+}, 50);
 
-//window.odometerOptions = {
-//  auto: false, // Don't automatically initialize everything with class 'odometer'
-//  selector: '.about-numbers__digits--projects', // Change the selector used to automatically find things to be animated
-//  format: 'd', // Change how digit groups are formatted, and how many digits are shown after the decimal point
-//  duration: 3000, // Change how long the javascript expects the CSS animation to take
-//  animation: 'count' // Count is a simpler animation method which just increments the value,
-//                     // use it when you're looking for something more subtle.
-//};
+sr.reveal('.main .review-item__link', { 
+  duration: 2000,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+}, 50);
+
+sr.reveal('.about-numbers__digits', { 
+  duration: 0,
+  distance: '0',
+  afterReveal: function (domEl) {
+    setTimeout(function(){
+      $('.about-numbers__digits--projects').html('83');
+  }, 1000);
+  },
+}, 50);
+
+sr.reveal('.about-numbers__digits', { 
+  duration: 0,
+  distance: '0',
+  afterReveal: function (domEl) {
+    setTimeout(function(){
+      $('.about-numbers__digits--years').html('2');
+      $('.about-numbers__digits--hours').html('7000');
+      $('.about-numbers__digits--customers').html('37');
+      $('.about-numbers__digits--projects').html('83');
+  }, 0);
+  },
+});
+
+window.odometerOptions = {
+  format: 'd', // Change how digit groups are formatted, and how many digits are shown after the decimal point
+  duration: 3000, // Change how long the javascript expects the CSS animation to take
+  animation: 'count' // Count is a simpler animation method which just increments the value,
+                     // use it when you're looking for something more subtle.
+};
 
 
 $(function() {

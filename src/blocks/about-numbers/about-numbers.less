@@ -56,10 +56,17 @@
     &--green {
       color: #00bf00;
     }
-  }
-  
-  &__digits-plus {
-//    padding-left: 1rem;
+    
+    &--hours {
+      display: flex!important;
+      align-items: center;
+      white-space: nowrap;
+      
+      &:after {
+        content: '+';
+        display: inline;
+      }
+    }
   }
   
   &__content {
@@ -67,7 +74,7 @@
     font-size: 2.2rem;
     font-weight: 300;
     color: #fff;
-    margin-top: 1.6rem;
+//    margin-top: 1.6rem;
     width: 27rem;
     
     @media screen and (max-width: @screen-md) {
