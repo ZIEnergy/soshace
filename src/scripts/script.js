@@ -265,6 +265,25 @@ sr.reveal('.main .services__item-content', {
   distance: '10rem'
 }, 50);
 
+sr.reveal('.history__step', { 
+  origin: 'right',
+  duration: 3000,
+  opacity: 0,
+  delay: 300,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+});
+
+sr.reveal('.history__year-content', { 
+  origin: 'left',
+  duration: 3000,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+});
+
+
+
 
 sr.reveal('.about-numbers__digits', { 
   duration: 0,
