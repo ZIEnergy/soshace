@@ -3,7 +3,7 @@
   height: 100%;
   
   &__content {
-    display: none;
+    
   }
   
   &__content-container {
@@ -190,11 +190,80 @@
     height: 4rem;
     background: #fff;
     position: absolute;
+    display: none;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     margin-top: -5.8rem;
     animation: rotation 1.2s infinite ease-in-out;
+  }
+  
+  &--standart {
+    
+    .form__content {
+      display: block;
+    }
+    
+    .form__message {
+      display: none;
+    }
+    
+    .form__loading {
+      display: none;
+    }
+  }
+  
+  &--success {
+    
+    .form__content {
+      display: none;
+    }
+    
+    .form__message {
+      display: none;
+    }
+    
+    .form__loading {
+      display: none;
+    }
+    
+    .form__message--success {
+      display: block;
+    }
+  }
+  
+  &--error {
+    
+    .form__content {
+      display: none;
+    }
+    
+    .form__message {
+      display: none;
+    }
+    
+    .form__loading {
+      display: none;
+    }
+    
+    .form__message--error {
+      display: block;
+    }
+  }
+  
+  &--loading {
+    
+    .form__content {
+      display: none;
+    }
+    
+    .form__message {
+      display: none;
+    }
+    
+    .form__loading {
+      display: block;
+    }
   }
 
   @keyframes rotation {
