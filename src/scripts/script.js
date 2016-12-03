@@ -259,10 +259,19 @@ sr.reveal('.main .about-numbers__content', {
 }, 50);
 
 sr.reveal('.main .services__item-content', { 
-  duration: 2000,
+  duration: 1000,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
+  distance: '10rem',
+  afterReveal: function (domEl) {
+    $('.services__item-icon').css('opacity', '1');
+    new Vivus('services-1', {duration: 100});
+    new Vivus('services-2', {duration: 100});
+    new Vivus('services-3', {duration: 100});
+    new Vivus('services-4', {duration: 100});
+    new Vivus('services-5', {duration: 100});
+    new Vivus('services-6', {duration: 100});
+  },
 }, 50);
 
 sr.reveal('.history__step', { 
@@ -282,6 +291,21 @@ sr.reveal('.history__year-content', {
   distance: '10rem'
 });
 
+//sr.reveal('.services__item-icon', { 
+//  duration: 3000,
+//  distance: '10rem',
+//  afterReveal: function (domEl) {
+//    setTimeout(function(){
+//      new Vivus('services-1', {duration: 40});
+//      new Vivus('services-2', {duration: 40});
+//      new Vivus('services-3', {duration: 40});
+//      new Vivus('services-4', {duration: 40});
+//      new Vivus('services-5', {duration: 40});
+//      new Vivus('services-6', {duration: 40});
+//    }, 0);
+//  },
+//});
+
 
 
 
@@ -294,7 +318,7 @@ sr.reveal('.about-numbers__digits', {
       $('.about-numbers__digits--hours').html('7000');
       $('.about-numbers__digits--customers').html('37');
       $('.about-numbers__digits--projects').html('83');
-  }, 0);
+    }, 0);
   },
 });
 
@@ -304,6 +328,7 @@ window.odometerOptions = {
   animation: 'count' // Count is a simpler animation method which just increments the value,
                      // use it when you're looking for something more subtle.
 };
+
 
 
 $(function() {
