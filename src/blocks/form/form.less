@@ -49,8 +49,6 @@
   
   &__upload {
     position: absolute;
-    right: -9.5rem;
-    bottom: 11.4rem;
         
     @media screen and (max-width: @screen-sm) {
       position: relative;
@@ -61,6 +59,11 @@
       flex-direction: column;
       align-items: center;
       margin-top: 3rem;
+    }
+    
+    &--standart {
+      right: -9.5rem;
+      bottom: 11.4rem;
     }
     
     &--uploading {
@@ -221,6 +224,7 @@
     
     .form__message {
       display: none;
+      opacity: 1;
     }
     
     .form__loading {

@@ -290,3 +290,24 @@ window.odometerOptions = {
 $(function() {
     FastClick.attach(document.body);
 });
+
+
+/* Scripts for testing */
+$('.form__button').click(function(e) {
+  e.preventDefault();
+  $('.form').addClass('form--loading');
+  setTimeout(function() {
+    $('.form').removeClass('form--loading');
+    $('.form').addClass('form--success');
+  }, 3000);
+});
+
+$('.form__upload-input').change(function() {
+  $('.form__upload').removeClass('form__upload--standart');
+  $('.form__upload').addClass('form__upload--uploading');
+  setTimeout(function() {
+    $('.form__upload-text').html('5Mb');
+    $('.form__upload').removeClass('form__upload--uploading');
+    $('.form__upload').addClass('form__upload--uploaded');
+  }, 3000);
+});

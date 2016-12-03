@@ -1,15 +1,15 @@
 mixin form(additionalClass)
-  form.form.form--success(action="#", method="post", class=additionalClass)
+  form.form.form--standart(action="mail.php", method="post", class=additionalClass)
     .form__content
       p.form__dscr Submit your request, and we will negotiate your project details: offer solutions, calculate the cost and specify the deadline.
       .form__content-container
         input.input.form__input(type="text", placeholder="Name", name="name")
         input.input.form__input(type="email", placeholder="E-mail", name="email")
         textarea.input.input--textarea.form__input(type="text", placeholder="Message", name="message")
-        .form__upload.form__upload--uploaded
+        .form__upload.form__upload--standart
           input(type="file").form__upload-input
           .form__upload-icon
-          .form__upload-text 10Mb
+          .form__upload-text max 10Mb
         button.button.form__button Discus a project
     .form__loading
     .form__message.form__message--success
