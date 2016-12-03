@@ -1,0 +1,70 @@
+.logo-animated {
+//    width: 48.5rem;
+//    height: 13.2rem;
+    width: 30rem;
+    height: 8rem;
+    position: relative;
+  
+  &__name {
+    background: url(../img/logo-name.svg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &__square {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    
+    &--blue {
+      background: @color-third;
+    }
+    
+    &--yellow {
+      background: @color-first;
+    }
+    
+    &--green {
+      background: @color-fourth;
+    }
+    
+    &--first {
+      left: 1rem;
+      top: 1rem;
+      transform: rotate(6deg);
+    }
+    
+    &--second {
+      left: 6.2rem;
+      top: .2rem;
+      transform: rotate(-5deg);
+    }
+    
+    &--third {
+      left: 10rem;
+      top: 1.3rem;
+      transform: rotate(1deg);
+    }
+    
+    &--fourth {
+      left: 15.2rem;
+      top: 0.8rem;
+      transform: rotate(5deg);
+    }
+    
+    &--fifth {
+      left: 19.1rem;
+      top: 0.1rem;
+      transform: rotate(-1deg);
+    }
+    
+    &--sixth {
+      left: 24.1rem;
+      top: 1.5rem;
+      transform: rotate(-5deg);
+    }
+  }
+}

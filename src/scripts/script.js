@@ -129,11 +129,13 @@ if ($(window).width() < 1200) {
 
 window.sr = ScrollReveal();
 
-sr.reveal('.front__logo', { 
+sr.reveal('.logo-animated__square', { 
+  origin: 'top',
   duration: 1000,
   easing: 'ease-in-out',
-  distance: '2rem'
-});
+  distance: '5rem'
+}, 100);
+
 
 sr.reveal('.front__button', { 
   duration: 1000,
