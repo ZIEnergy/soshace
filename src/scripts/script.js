@@ -170,13 +170,13 @@ sr.reveal('.technologies__item', {
   distance: '2rem'
 }, 50);
 
-sr.reveal('.input', { 
+sr.reveal('.main .input', { 
   duration: 1000,
   easing: 'ease-in-out',
   distance: '2rem'
 }, 50);
 
-sr.reveal('.form__upload', { 
+sr.reveal('.main .form__upload', { 
   duration: 1000,
   delay: 500,
   opacity: 0,
@@ -198,14 +198,14 @@ sr.reveal('.main .socials', {
   distance: '0'
 }, 50);
 
-sr.reveal('.form__dscr', { 
+sr.reveal('.main .form__dscr', { 
   duration: 1000,
   opacity: 0,
   easing: 'ease-in-out',
   distance: '0'
 });
 
-sr.reveal('.section-link', { 
+sr.reveal('.main .section-link', { 
   duration: 1000,
   opacity: 0,
   easing: 'ease-in-out',
@@ -291,15 +291,6 @@ sr.reveal('.history__step', {
   mobile: false
 });
 
-//sr.reveal('.history__timeline', { 
-//  duration: 0,
-//  distance: 0,
-//  viewFactor: .5,
-//  afterReveal: function (domEl) {
-//    
-//  },
-//});
-
 sr.reveal('.history__year-content', { 
   origin: 'left',
   duration: 3000,
@@ -311,9 +302,42 @@ sr.reveal('.history__year-content', {
   mobile: false
 });
 
-
-sr.reveal('.about-numbers__digits', { 
+sr.reveal('.history__year--two', { 
   duration: 0,
+  distance: 0,
+  viewFactor: .1,
+  afterReveal: function (domEl) {
+    $(function() {
+        $(window).scroll(function() {
+            var $myDiv = $('.history__timeline--two');
+            var st = $(this).scrollTop();
+            var stMax = 0;
+            $myDiv.height(st);
+            if( st == 0 ) {
+                $myDiv.hide();
+            } else {
+                $myDiv.show();
+            }
+            if ($('.history__timeline--two').height() < st) {
+              $('.history__timeline--three').find('.history__timeline-dot').fadeIn('fast');
+              stMax = $myDiv.height();
+              $myDiv = $('.history__timeline--three');
+              $myDiv.height(st - stMax);
+              if ($('.history__timeline--three').height() < (st - stMax)) {
+                $('.history__timeline--four').find('.history__timeline-dot').fadeIn('fast');
+                stMax = stMax + $myDiv.height();
+                $myDiv = $('.history__timeline--four');
+                $myDiv.height(st - stMax);
+              }
+            }
+        }).scroll();
+    });
+  },
+});
+
+
+sr.reveal('.main .about-numbers__digits', { 
+  duration: '0',
   distance: '0',
   afterReveal: function (domEl) {
     setTimeout(function(){
@@ -331,32 +355,6 @@ window.odometerOptions = {
   animation: 'count' // Count is a simpler animation method which just increments the value,
                      // use it when you're looking for something more subtle.
 };
-
-$(function() {
-    $(window).scroll(function() {
-        var $myDiv = $('.history__timeline--two');
-        var st = $(this).scrollTop();
-        var stMax = 0;
-        $myDiv.height(st);
-        if( st == 0 ) {
-            $myDiv.hide();
-        } else {
-            $myDiv.show();
-        }
-        if ($('.history__timeline--two').height() < st) {
-          $('.history__timeline--three').find('.history__timeline-dot').fadeIn('fast');
-          stMax = $myDiv.height();
-          $myDiv = $('.history__timeline--three');
-          $myDiv.height(st - stMax);
-          if ($('.history__timeline--three').height() < (st - stMax)) {
-            $('.history__timeline--four').find('.history__timeline-dot').fadeIn('fast');
-            stMax = stMax + $myDiv.height();
-            $myDiv = $('.history__timeline--four');
-            $myDiv.height(st - stMax);
-          }
-        }
-    }).scroll();
-})
 
 
 

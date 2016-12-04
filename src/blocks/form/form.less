@@ -1,6 +1,11 @@
 .form {
   position: relative;
   height: 100%;
+        
+  @media screen and (max-width: @screen-sm) {
+    min-height: 35rem;
+    min-width: 100%;
+  }
   
   &__content {
     
@@ -77,6 +82,12 @@
       align-items: flex-start;
       right: -7.8rem;
       bottom: 9.6rem;
+        
+      @media screen and (max-width: @screen-sm) {
+        right: 0;
+        bottom: 0;
+        background-position: center;
+      }
       
       .form__upload-icon {
         width: 5.8rem;
@@ -84,6 +95,7 @@
         background: url(../img/document.png) no-repeat;
         background-size: cover;
         position: relative;
+        margin: 0 auto;
         
         &:before {
           content: '';
@@ -110,6 +122,11 @@
       align-items: flex-start;
       right: -7.8rem;
       bottom: 9.6rem;
+        
+      @media screen and (max-width: @screen-sm) {
+        right: 0;
+        bottom: 0;
+      }
       
       .form__upload-icon {
         width: 5.8rem;
@@ -117,6 +134,7 @@
         background: url(../img/document.png) no-repeat;
         background-size: cover;
         position: relative;
+        margin: 0 auto;
       }
       
       .form__upload-text {
@@ -201,9 +219,14 @@
     display: none;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -5.8rem;
+//    transform: translate(-50%, -50%);
+    margin-top: -7.8rem;
     animation: rotation 1.2s infinite ease-in-out;
+        
+    @media screen and (max-width: @screen-sm) {
+      margin-top: -2rem;
+      margin-left: -2rem;
+    }
   }
   
   &--standart {
