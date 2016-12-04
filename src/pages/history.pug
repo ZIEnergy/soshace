@@ -6,12 +6,14 @@ html(lang='en')
   body.body
     +header
     .page.history
-      .wrapper
+      .wrapper.history__wrapper
         a.link-back.history__link-back(href="about.html") Back to About Us
         h1.section-header.section-header--black Company timeline
         .history__content
           .history__year
             .history__item.history__year-content.history__year-content--blue 2016
+            .history__timeline.history__timeline--growing
+              .history__timeline-dot
             .history__item.history__dscr
               .history__step
                 .history__step-media.history__step-media--team team members
@@ -26,7 +28,7 @@ html(lang='en')
               .history__step
                 .history__step-month March
                 .history__step-dscr We celebrate our first birthday! This year has brought us 7,000+ working hours and 92 successful projects.
-          .history__year
+          .history__year.history__year--two
             .history__item.history__dscr
               .history__step
                 .history__step-month December
@@ -41,16 +43,20 @@ html(lang='en')
                   img.history__step-picture(src="img/company.png", alt="Company")
                 .history__step-month March
                 .history__step-dscr We build a team and register our company as Soshace LLC hiring our first stuff. The greatest things are in the air.
+            .history__timeline.history__timeline--two
+              .history__timeline-dot
             .history__item.history__year-content.history__year-content--green 2015
-          .history__year
+          .history__year.history__year--three
             .history__item.history__year-content.history__year-content--blue 2014
+            .history__timeline.history__timeline--three
+              .history__timeline-dot
             .history__item.history__dscr
               .history__step
                 .history__step-media
                   img.history__step-picture.history__logo(src="img/logo.png", alt="Soshace Logo")
                 .history__step-month December
                 .history__step-dscr We register the agency’s profile at elance.com. A domain name soshace.com is decided to be used for our web development studio.
-          .history__year
+          .history__year.history__year--four
             .history__item.history__dscr
               .history__step
                 .history__step-month June
@@ -58,6 +64,8 @@ html(lang='en')
                   a.history__step-link(href="https://medium.com/") medium.com 
                   | or &nbsp;
                   a.history__step-link(href="http://mashable.com/") mashable.com.
+            .history__timeline.history__timeline--four
+              .history__timeline-dot
             .history__item.history__year-content.history__year-content--green 2013
     +feedback
     +contacts

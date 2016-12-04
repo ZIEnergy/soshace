@@ -3,7 +3,6 @@
   padding-top: 8rem;
     
   @media screen and (max-width: @screen-sm) {
-//    padding-top: 0;
     padding-bottom: 10rem;
   }
   
@@ -35,6 +34,13 @@
       padding: 0 1.5rem;
     }
     
+    &:nth-child(n+3) {
+      
+      .history__timeline-dot {
+        display: none;
+      }
+    }
+    
     &:nth-child(n+2) {
       padding-top: 4rem;
     
@@ -47,56 +53,46 @@
       }
     }
     
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      width: .2rem;
-      height: 100%;
-      left: 50%;
-    
-      @media screen and (max-width: @screen-sm) {
-        display: none;
-      }
+    &:first-child {
+      z-index: 4;
+//      
+//      .history__timeline {
+//        height: 0;
+//        animation: growth 1.5s linear;
+//        animation-fill-mode: forwards; 
+//      }
     }
     
-    &:after {
-      content: '';
-      display: block;
-      width: 2rem;
-      height: 2rem;
-      position: absolute;
-      left: 50%;
-      margin-left: -.9rem;
-      bottom: -1rem;
-      background: @color-third;
-      border-radius: 50%;
-      z-index: 2;
+    &:nth-child(2) {
+      z-index: 3;
+    }
     
-      @media screen and (max-width: @screen-sm) {
-        display: none;
-      }
+    &:nth-child(3) {
+      z-index: 2;
+    }
+    
+    &:nth-child(4) {
+      z-index: 1;
     }
     
     &:nth-child(2n) {
       
-      &:before {
+      .history__timeline {
         background: @color-fourth;
       }
       
-      &:after {
+      .history__timeline-dot {
         background: @color-fourth;
       }
     }
     
     &:nth-child(2n+1) {
       
-      &:before {
+      .history__timeline {
         background: @color-third;
       }
       
-      &:after {
+      .history__timeline-dot {
         background: @color-third;
       }
     }
@@ -104,6 +100,7 @@
   
   &__item {
     width: 50%;
+    overflow: hidden;
     
     @media screen and (max-width: @screen-sm) {
       width: 100%;
@@ -252,5 +249,52 @@
     @media screen and (max-width: @screen-sm) {
       padding-left: 1.5rem;
     }
+  }
+  
+  &__timeline {
+    position: absolute;
+    top: 0;
+    width: .2rem;
+    height: 0;
+    max-height: 100%;
+    left: 50%;
+
+    @media screen and (max-width: @screen-sm) {
+      display: none;
+    }
+    
+    &--growing {
+      height: 0;
+      animation: growth 1.5s linear;
+      animation-fill-mode: forwards; 
+    }
+  }
+  
+  &__timeline-dot {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -1rem;
+    bottom: -1rem;
+    background: @color-third;
+    border-radius: 50%;
+    z-index: 2;
+
+    @media screen and (max-width: @screen-sm) {
+      display: none;
+    }
+  }
+}
+
+@keyframes growth {
+  0% { 
+    height: 0;
+  }
+  50% { 
+    height: 50%;
+  }
+  100% { 
+    height: 100%;
   }
 }

@@ -1,6 +1,4 @@
 .logo-animated {
-//    width: 48.5rem;
-//    height: 13.2rem;
     width: 30rem;
     height: 8rem;
     position: relative;
@@ -19,6 +17,33 @@
     width: 6rem;
     height: 6rem;
     
+    &--animated {
+      
+      &.logo-animated__square--first {
+        transform: rotate(6deg)!important;
+      }
+      
+      &.logo-animated__square--second {
+        transform: rotate(-5deg)!important;
+      }
+      
+      &.logo-animated__square--third {
+        transform: rotate(1deg)!important;
+      }
+      
+      &.logo-animated__square--fourth {
+        transform: rotate(5deg)!important;
+      }
+      
+      &.logo-animated__square--fifth {
+        transform: rotate(-1deg)!important;
+      }
+      
+      &.logo-animated__square--sixth {
+        transform: rotate(-5deg)!important;
+      }
+    }
+    
     &--blue {
       background: @color-third;
     }
@@ -29,42 +54,38 @@
     
     &--green {
       background: @color-fourth;
+      z-index: 2;
     }
     
     &--first {
       left: 1rem;
       top: 1rem;
-      transform: rotate(6deg);
     }
     
     &--second {
       left: 6.2rem;
       top: .2rem;
-      transform: rotate(-5deg);
+      z-index: 3;
     }
     
     &--third {
       left: 10rem;
       top: 1.3rem;
-      transform: rotate(1deg);
     }
     
     &--fourth {
       left: 15.2rem;
       top: 0.8rem;
-      transform: rotate(5deg);
     }
     
     &--fifth {
       left: 19.1rem;
       top: 0.1rem;
-      transform: rotate(-1deg);
     }
     
     &--sixth {
-      left: 24.1rem;
+      left: 23.1rem;
       top: 1.5rem;
-      transform: rotate(-5deg);
     }
   }
 }

@@ -133,7 +133,10 @@ sr.reveal('.logo-animated__square', {
   origin: 'top',
   duration: 1000,
   easing: 'ease-in-out',
-  distance: '5rem'
+  distance: '5rem',
+  afterReveal: function (domEl) {
+    $('.logo-animated__square').addClass('logo-animated__square--animated');
+  },
 }, 100);
 
 
@@ -280,35 +283,31 @@ sr.reveal('.history__step', {
   origin: 'right',
   duration: 3000,
   opacity: 0,
-  delay: 300,
+//  delay: 1500,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
+  distance: '10rem',
+  viewFactor: 1,
+  reset: true
 });
+
+//sr.reveal('.history__timeline', { 
+//  duration: 0,
+//  distance: 0,
+//  viewFactor: .5,
+//  afterReveal: function (domEl) {
+//    
+//  },
+//});
 
 sr.reveal('.history__year-content', { 
   origin: 'left',
   duration: 3000,
+//  delay: 1500,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
+  distance: '10rem',
+  reset: true
 });
-
-//sr.reveal('.services__item-icon', { 
-//  duration: 3000,
-//  distance: '10rem',
-//  afterReveal: function (domEl) {
-//    setTimeout(function(){
-//      new Vivus('services-1', {duration: 40});
-//      new Vivus('services-2', {duration: 40});
-//      new Vivus('services-3', {duration: 40});
-//      new Vivus('services-4', {duration: 40});
-//      new Vivus('services-5', {duration: 40});
-//      new Vivus('services-6', {duration: 40});
-//    }, 0);
-//  },
-//});
-
-
 
 
 sr.reveal('.about-numbers__digits', { 
@@ -330,6 +329,35 @@ window.odometerOptions = {
   animation: 'count' // Count is a simpler animation method which just increments the value,
                      // use it when you're looking for something more subtle.
 };
+
+$(function() {
+    $(window).scroll(function() {
+        var $myDiv = $('.history__timeline--two');
+        var st = $(this).scrollTop();
+        var stMax = 0;
+        $myDiv.height(st);
+        if( st == 0 ) {
+            $myDiv.hide();
+        } else {
+            $myDiv.show();
+        }
+        if ($('.history__timeline--two').height() < st) {
+          $('.history__timeline--three').find('.history__timeline-dot').fadeIn('fast');
+          stMax = $myDiv.height();
+          $myDiv = $('.history__timeline--three');
+          $myDiv.height(st - stMax);
+//          console.log('timeline3 height: ' + $myDiv.height(), 'stMax: ' + stMax, 'scroll updated height: ' + (st - stMax), 'scroll overall: ' + st);
+          if ($('.history__timeline--three').height() < (st - stMax)) {
+            $('.history__timeline--four').find('.history__timeline-dot').fadeIn('fast');
+            stMax = stMax + $myDiv.height();
+            $myDiv = $('.history__timeline--four');
+            $myDiv.height(st - stMax);
+//          console.log('timeline4 height: ' + $myDiv.height(), 'stMax: ' + stMax, 'scroll updated height: ' + (st - stMax), 'scroll overall: ' + st);
+          }
+        }
+    }).scroll();
+})
+
 
 
 
