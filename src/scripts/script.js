@@ -346,13 +346,11 @@ $(function() {
           stMax = $myDiv.height();
           $myDiv = $('.history__timeline--three');
           $myDiv.height(st - stMax);
-//          console.log('timeline3 height: ' + $myDiv.height(), 'stMax: ' + stMax, 'scroll updated height: ' + (st - stMax), 'scroll overall: ' + st);
           if ($('.history__timeline--three').height() < (st - stMax)) {
             $('.history__timeline--four').find('.history__timeline-dot').fadeIn('fast');
             stMax = stMax + $myDiv.height();
             $myDiv = $('.history__timeline--four');
             $myDiv.height(st - stMax);
-//          console.log('timeline4 height: ' + $myDiv.height(), 'stMax: ' + stMax, 'scroll updated height: ' + (st - stMax), 'scroll overall: ' + st);
           }
         }
     }).scroll();
