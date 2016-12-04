@@ -287,7 +287,8 @@ sr.reveal('.history__step', {
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem',
   viewFactor: 1,
-  reset: true
+  reset: true,
+  mobile: false
 });
 
 //sr.reveal('.history__timeline', { 
@@ -306,7 +307,8 @@ sr.reveal('.history__year-content', {
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem',
-  reset: true
+  reset: true,
+  mobile: false
 });
 
 
