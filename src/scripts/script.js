@@ -131,9 +131,9 @@ window.sr = ScrollReveal();
 
 sr.reveal('.logo-animated__square', { 
   origin: 'top',
-  duration: 1000,
-  easing: 'ease-in-out',
-  distance: '5rem',
+  duration: 500,
+  easing: 'linear',
+  distance: '10rem',
   afterReveal: function (domEl) {
     $('.logo-animated__square').addClass('logo-animated__square--animated');
   },
@@ -175,19 +175,19 @@ sr.reveal('.about-numbers__content', {
   distance: '10rem'
 }, 50);
 
-sr.reveal('.services__item-content', { 
-  duration: 1000,
-  opacity: 0,
+sr.reveal('.services__item', { 
+  duration: 0,
+  viewFactor: 0.5,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem',
   afterReveal: function (domEl) {
-    $('.services__item-icon').css('opacity', '1');
-    new Vivus('services-1', {duration: 100, type: 'oneByOne'});
-    new Vivus('services-2', {duration: 100, type: 'oneByOne'});
-    new Vivus('services-3', {duration: 100, type: 'oneByOne'});
-    new Vivus('services-4', {duration: 100, type: 'oneByOne'});
-    new Vivus('services-5', {duration: 100, type: 'oneByOne'});
-    new Vivus('services-6', {duration: 100, type: 'oneByOne'});
+    $('.services__item-icon').fadeIn('fast');
+//    new Vivus('services-1', {duration: 2000, type: 'oneByOne'});
+//    new Vivus('services-2', {duration: 2000, type: 'oneByOne'});
+//    new Vivus('services-3', {duration: 2000, type: 'oneByOne'});
+//    new Vivus('services-4', {duration: 2000, type: 'oneByOne'});
+//    new Vivus('services-5', {duration: 2000, type: 'oneByOne'});
+//    new Vivus('services-6', {duration: 2000, type: 'oneByOne'});
   },
 }, 50);
 
