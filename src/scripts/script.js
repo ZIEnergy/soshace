@@ -139,14 +139,13 @@ sr.reveal('.logo-animated__square', {
   },
 }, 100);
 
-
 sr.reveal('.front__button', { 
   duration: 1000,
   easing: 'ease-in-out',
   distance: '2rem'
 });
 
-sr.reveal('.main .form__button', { 
+sr.reveal('.form__button', { 
   duration: 1000,
   easing: 'ease-in-out',
   distance: '2rem'
@@ -158,7 +157,7 @@ sr.reveal('.front__about-item', {
   distance: '2rem'
 }, 50);
 
-sr.reveal('.main .section-header', { 
+sr.reveal('.section-header', { 
   duration: 1000,
   easing: 'ease-in-out',
   distance: '2rem'
@@ -170,13 +169,13 @@ sr.reveal('.technologies__item', {
   distance: '2rem'
 }, 50);
 
-sr.reveal('.main .input', { 
+sr.reveal('.input', { 
   duration: 1000,
   easing: 'ease-in-out',
   distance: '2rem'
 }, 50);
 
-sr.reveal('.main .form__upload', { 
+sr.reveal('.form__upload', { 
   duration: 1000,
   delay: 500,
   opacity: 0,
@@ -184,28 +183,28 @@ sr.reveal('.main .form__upload', {
   distance: '0'
 }, 50);
 
-sr.reveal('.main .contacts-content__item', { 
+sr.reveal('.contacts-content__item', { 
   duration: 1000,
   opacity: 0,
   easing: 'ease-in-out',
   distance: '0'
 }, 50);
 
-sr.reveal('.main .socials', { 
+sr.reveal('.socials', { 
   duration: 1000,
   opacity: 0,
   easing: 'ease-in-out',
   distance: '0'
 }, 50);
 
-sr.reveal('.main .form__dscr', { 
+sr.reveal('.form__dscr', { 
   duration: 1000,
   opacity: 0,
   easing: 'ease-in-out',
   distance: '0'
 });
 
-sr.reveal('.main .section-link', { 
+sr.reveal('.section-link', { 
   duration: 1000,
   opacity: 0,
   easing: 'ease-in-out',
@@ -219,42 +218,42 @@ sr.reveal('.portfolio-item', {
   distance: '10rem'
 }, 50);
 
-sr.reveal('.main .review-item__photo-link', { 
+sr.reveal('.review-item__photo-link', { 
   duration: 2000,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem'
 }, 50);
 
-sr.reveal('.main .review-item__info-item', { 
+sr.reveal('.review-item__info-item', { 
   duration: 2000,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem'
 }, 50);
 
-sr.reveal('.main .review-item__evaluation', { 
+sr.reveal('.review-item__evaluation', { 
   duration: 2000,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem'
 }, 50);
 
-sr.reveal('.main .review-item__dscr', { 
+sr.reveal('.review-item__dscr', { 
   duration: 2000,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem'
 }, 50);
 
-sr.reveal('.main .review-item__link', { 
+sr.reveal('.review-item__link', { 
   duration: 2000,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem'
 }, 50);
 
-sr.reveal('.main .about-numbers__content', { 
+sr.reveal('.about-numbers__content', { 
   duration: 2000,
   origin: 'left',
   delay: 100,
@@ -263,7 +262,7 @@ sr.reveal('.main .about-numbers__content', {
   distance: '10rem'
 }, 50);
 
-sr.reveal('.main .services__item-content', { 
+sr.reveal('.services__item-content', { 
   duration: 1000,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
@@ -283,22 +282,18 @@ sr.reveal('.history__step', {
   origin: 'right',
   duration: 3000,
   opacity: 0,
-//  delay: 1500,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem',
   viewFactor: 1,
-  reset: true,
   mobile: false
 });
 
 sr.reveal('.history__year-content', { 
   origin: 'left',
   duration: 3000,
-//  delay: 1500,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem',
-  reset: true,
   mobile: false
 });
 
@@ -308,35 +303,38 @@ sr.reveal('.history__year--two', {
   viewFactor: .1,
   afterReveal: function (domEl) {
     $(function() {
-        $(window).scroll(function() {
-            var $myDiv = $('.history__timeline--two');
-            var st = $(this).scrollTop();
-            var stMax = 0;
-            $myDiv.height(st);
-            if( st == 0 ) {
-                $myDiv.hide();
-            } else {
-                $myDiv.show();
+      $(window).scroll(function() {
+        var $myDiv = $('.history__timeline--two');
+        var st = $(this).scrollTop();
+        var stMax = 0;
+        $myDiv.height(st);
+        if( st == 0 ) {
+            $myDiv.hide();
+        } else {
+            $myDiv.show();
+        }
+        if ($('.history__timeline--two').height() < st) {
+          $('.history__timeline--three').find('.history__timeline-dot').fadeIn('fast');
+          stMax = $myDiv.height();
+          $myDiv = $('.history__timeline--three');
+          $myDiv.height(st - stMax);
+          if ($('.history__timeline--three').height() < (st - stMax)) {
+            $('.history__timeline--four').find('.history__timeline-dot').fadeIn('fast');
+            stMax = stMax + $myDiv.height();
+            $myDiv = $('.history__timeline--four');
+            $myDiv.height(st - stMax);
+            if ($('.history__timeline--four').height() < (st - stMax)) {
+              $(window).unbind('scroll');
             }
-            if ($('.history__timeline--two').height() < st) {
-              $('.history__timeline--three').find('.history__timeline-dot').fadeIn('fast');
-              stMax = $myDiv.height();
-              $myDiv = $('.history__timeline--three');
-              $myDiv.height(st - stMax);
-              if ($('.history__timeline--three').height() < (st - stMax)) {
-                $('.history__timeline--four').find('.history__timeline-dot').fadeIn('fast');
-                stMax = stMax + $myDiv.height();
-                $myDiv = $('.history__timeline--four');
-                $myDiv.height(st - stMax);
-              }
-            }
-        }).scroll();
+          }
+        }
+      }).scroll();
     });
   },
 });
 
 
-sr.reveal('.main .about-numbers__digits', { 
+sr.reveal('.about-numbers__digits', { 
   duration: '0',
   distance: '0',
   afterReveal: function (domEl) {
@@ -350,10 +348,9 @@ sr.reveal('.main .about-numbers__digits', {
 });
 
 window.odometerOptions = {
-  format: 'd', // Change how digit groups are formatted, and how many digits are shown after the decimal point
-  duration: 3000, // Change how long the javascript expects the CSS animation to take
-  animation: 'count' // Count is a simpler animation method which just increments the value,
-                     // use it when you're looking for something more subtle.
+  format: 'd',
+  duration: 3000,
+  animation: 'count'
 };
 
 
