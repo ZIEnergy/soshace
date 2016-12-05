@@ -145,12 +145,6 @@ sr.reveal('.reveal', {
   distance: '2rem'
 });
 
-sr.reveal('.reveal--by-one', { 
-  duration: 1000,
-  easing: 'ease-in-out',
-  distance: '2rem'
-}, 50);
-
 sr.reveal('.form__upload', { 
   duration: 1000,
   delay: 500,
