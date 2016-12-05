@@ -146,7 +146,7 @@ sr.reveal('.front__button', {
   distance: '2rem'
 });
 
-sr.reveal('.form__button', { 
+sr.reveal('.main .form__button', { 
   duration: 1000,
   easing: 'ease-in-out',
   distance: '2rem'
@@ -270,12 +270,12 @@ sr.reveal('.main .services__item-content', {
   distance: '10rem',
   afterReveal: function (domEl) {
     $('.services__item-icon').css('opacity', '1');
-    new Vivus('services-1', {duration: 100});
-    new Vivus('services-2', {duration: 100});
-    new Vivus('services-3', {duration: 100});
-    new Vivus('services-4', {duration: 100});
-    new Vivus('services-5', {duration: 100});
-    new Vivus('services-6', {duration: 100});
+    new Vivus('services-1', {duration: 100, type: 'oneByOne'});
+    new Vivus('services-2', {duration: 100, type: 'oneByOne'});
+    new Vivus('services-3', {duration: 100, type: 'oneByOne'});
+    new Vivus('services-4', {duration: 100, type: 'oneByOne'});
+    new Vivus('services-5', {duration: 100, type: 'oneByOne'});
+    new Vivus('services-6', {duration: 100, type: 'oneByOne'});
   },
 }, 50);
 
