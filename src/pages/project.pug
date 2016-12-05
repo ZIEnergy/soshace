@@ -7,14 +7,14 @@ html(lang='en')
     +header
     .page.project
       .wrapper
-        a.link-back(href="portfolio.html") Back to Portfolio
+        a.link-back.reveal(href="portfolio.html") Back to Portfolio
         .project__header-wrapper
-          a.section-header.section-header--black.project__header(href="http://www.furtivelook.com/") Furtivelook
+          a.section-header.section-header--black.project__header.reveal(href="http://www.furtivelook.com/") Furtivelook
         .project__content
-          .project__content-item
+          .project__content-item.reveal
             h2.project__content-header Target:
             p.project__content-text To develop functionality of a web app helping people who once were acquainted to find each other. 
-          .project__content-item
+          .project__content-item.reveal
             h2.project__content-header Results:
             ol.project__list-ordered
               li.project__list-ordered-item.project__content-text 1. We added a function of signing in via Facebook and Google+
@@ -23,18 +23,18 @@ html(lang='en')
               li.project__list-ordered-item.project__content-text 4. We developed a service administrator control panel
               p.project__content-text 5. We expanded search and ads capabilities, improved the service convenience for users. We continue our work with other projects.
           .project__content-item
-            h2.project__content-header Technologies:
-            .project__technologies
+            h2.project__content-header.reveal Technologies:
+            .project__technologies.reveal
               .project__technologies-item.project__technologies-item--meteor
               .project__technologies-item.project__technologies-item--react
               .project__technologies-item.project__technologies-item--google
               .project__technologies-item.project__technologies-item--facebook
               .project__technologies-item.project__technologies-item--maps
               .project__technologies-item.project__technologies-item--ecma
-          img.project__screenshot(src="img/project-1.jpg", alt="Furtivelook")
+          img.project__screenshot.reveal(src="img/project-1.jpg", alt="Furtivelook")
           .project__content-item
-            h2.project__content-header Feedback:
-            .project__reviews
+            h2.project__content-header.reveal Feedback:
+            .project__reviews.reveal
               +review-item--nolink('client-1.jpg', 'May 2016 - Jun 2016', 'FurtiveLook’s step 1 and 2', 'Jérôme Siau', 'Vitaly Zhukov', 'full', 'full', 'full', 'full', 'full', '5', 'Vitalii is a top developper on javascript framework (meteor + react). Thx for your hard work Vitalii!', 'project__review-item', 'review-item--vertical')
               +review-item--nophoto('Mar 2016 - May 2016', 'Meteor+React app', 'Jérôme Siau', 'Vitaly Zhukov', 'full', 'full', 'full', 'full', 'full', '5', 'Best experience i had on upwork. Vitalii is an excellent meteor developper and have a lot of good idea to improve my project. I will work with him asap.', 'project__review-item', 'review-item--vertical')
     +feedback

@@ -1,9 +1,9 @@
 mixin services(additionalClass)
   .services.section#services(class=additionalClass)
     .wrapper
-      h2.section-header.section-header--black Services
+      h2.section-header.section-header--black.reveal Services
       ul.services__list
-        li.services__item
+        li.services__item.reveal
           svg.services__item-icon#services-1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 376.7 341.3', style='enable-background:new 0 0 376.7 341.3;', xml:space='preserve')
             style(type='text/css').
               .st0{fill:none;stroke:#2377DE;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -18,7 +18,7 @@ mixin services(additionalClass)
             polyline.st0(points='248,154 316.7,196 248.7,236 ')
             line.st0(x1='241.3', y1='7.3', x2='241.3', y2='54')
           .services__item-content Server programming
-        li.services__item
+        li.services__item.reveal
           svg.services__item-icon#services-2(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 376 376', style='enable-background:new 0 0 376 376;', xml:space='preserve')
             style(type='text/css').
               .st0{fill:none;stroke:#2377DE;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -33,7 +33,7 @@ mixin services(additionalClass)
             line.st0(x1='232.7', y1='322', x2='370', y2='322')
             line.st0(x1='285.3', y1='346.7', x2='312', y2='346.7')
           .services__item-content Adaptive coding
-        li.services__item
+        li.services__item.reveal
           svg.services__item-icon#services-3(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 376.7 350.7', style='enable-background:new 0 0 376.7 350.7;', xml:space='preserve')
             style(type='text/css').
               .st0{fill:none;stroke:#2377DE;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -89,7 +89,7 @@ mixin services(additionalClass)
             rect.st0(x='148.8', y='253.3', width='78.7', height='44')
             rect.st0(x='251.3', y='253.3', width='78.7', height='44')
           .services__item-content Development of web app prototypes 
-        li.services__item
+        li.services__item.reveal
           svg.services__item-icon#services-6(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 331 410', style='enable-background:new 0 0 331 410;', xml:space='preserve')
             style(type='text/css').
               .st0{fill:none;stroke:#2377DE;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -106,4 +106,4 @@ mixin services(additionalClass)
             line.st0(x1='244.7', y1='251', x2='244.7', y2='282')
             line.st0(x1='188.4', y1='284.3', x2='301', y2='284.3')
           .services__item-content Leased developer
-      +section-link('services.html', 'More on services')
+      +section-link('services.html', 'More on services', 'reveal')

@@ -1,10 +1,10 @@
 mixin about(additionalClass)
   .about.section#about(class=additionalClass)
     .wrapper.about__wrapper
-      h2.section-header About us
+      h2.section-header.reveal About us
       .about__content
         .about__arrows-container
           .about__arrow.about__arrow--top
           .about__arrow.about__arrow--bottom
         +about-numbers('about__about-numbers')
-        +section-link('about.html', 'More about us', 'section-link--white')
+        +section-link('about.html', 'More about us', 'section-link--white', 'reveal')

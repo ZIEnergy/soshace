@@ -139,37 +139,13 @@ sr.reveal('.logo-animated__square', {
   },
 }, 100);
 
-sr.reveal('.front__button', { 
+sr.reveal('.reveal', { 
   duration: 1000,
   easing: 'ease-in-out',
   distance: '2rem'
 });
 
-sr.reveal('.form__button', { 
-  duration: 1000,
-  easing: 'ease-in-out',
-  distance: '2rem'
-});
-
-sr.reveal('.front__about-item', { 
-  duration: 1000,
-  easing: 'ease-in-out',
-  distance: '2rem'
-}, 50);
-
-sr.reveal('.section-header', { 
-  duration: 1000,
-  easing: 'ease-in-out',
-  distance: '2rem'
-});
-
-sr.reveal('.technologies__item', { 
-  duration: 1000,
-  easing: 'ease-in-out',
-  distance: '2rem'
-}, 50);
-
-sr.reveal('.input', { 
+sr.reveal('.reveal--by-one', { 
   duration: 1000,
   easing: 'ease-in-out',
   distance: '2rem'
@@ -183,70 +159,7 @@ sr.reveal('.form__upload', {
   distance: '0'
 }, 50);
 
-sr.reveal('.contacts-content__item', { 
-  duration: 1000,
-  opacity: 0,
-  easing: 'ease-in-out',
-  distance: '0'
-}, 50);
-
-sr.reveal('.socials', { 
-  duration: 1000,
-  opacity: 0,
-  easing: 'ease-in-out',
-  distance: '0'
-}, 50);
-
-sr.reveal('.form__dscr', { 
-  duration: 1000,
-  opacity: 0,
-  easing: 'ease-in-out',
-  distance: '0'
-});
-
-sr.reveal('.section-link', { 
-  duration: 1000,
-  opacity: 0,
-  easing: 'ease-in-out',
-  distance: '0'
-});
-
 sr.reveal('.portfolio-item', { 
-  duration: 2000,
-  opacity: 0,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
-}, 50);
-
-sr.reveal('.review-item__photo-link', { 
-  duration: 2000,
-  opacity: 0,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
-}, 50);
-
-sr.reveal('.review-item__info-item', { 
-  duration: 2000,
-  opacity: 0,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
-}, 50);
-
-sr.reveal('.review-item__evaluation', { 
-  duration: 2000,
-  opacity: 0,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
-}, 50);
-
-sr.reveal('.review-item__dscr', { 
-  duration: 2000,
-  opacity: 0,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
-}, 50);
-
-sr.reveal('.review-item__link', { 
   duration: 2000,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',

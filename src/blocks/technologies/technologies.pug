@@ -1,14 +1,14 @@
 mixin technologies(additionalClass)
   .technologies.section#technologies(class=additionalClass)
     .wrapper
-      h2.section-header Technologies
+      h2.section-header.reveal Technologies
       .technologies__list
         .technologies__row
-          .technologies__item.technologies__item--angular Angular
-          .technologies__item.technologies__item--react React
-          .technologies__item.technologies__item--d3 D3.js
+          .technologies__item.reveal--by-one.technologies__item--angular Angular
+          .technologies__item.reveal--by-one.technologies__item--react React
+          .technologies__item.reveal--by-one.technologies__item--d3 D3.js
         .technologies__row
-          .technologies__item.technologies__item--meteor 
-          .technologies__item.technologies__item--html HTML
-          .technologies__item.technologies__item--css CSS
-      +section-link('technologies.html', 'More on technologies', 'section-link--white')
+          .technologies__item.reveal--by-one.technologies__item--meteor 
+          .technologies__item.reveal--by-one.technologies__item--html HTML
+          .technologies__item.reveal--by-one.technologies__item--css CSS
+      +section-link('technologies.html', 'More on technologies', 'section-link--white', 'reveal')

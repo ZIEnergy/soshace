@@ -1,7 +1,7 @@
 mixin portfolio(additionalClass)
   .portfolio.section#portfolio(class=additionalClass)
     .wrapper
-      h2.section-header.section-header--black Portfolio
+      h2.section-header.section-header--black.reveal Portfolio
       ul.portfolio-list.portfolio__portfolio-list
         .portfolio-list__item
           +portfolio-item('portfolio-1.jpg')
@@ -21,4 +21,4 @@ mixin portfolio(additionalClass)
           +portfolio-item('portfolio-8.jpg')
         .portfolio-list__item
           +portfolio-item('portfolio-9.jpg')
-      +section-link('portfolio.html', 'View all projects')
+      +section-link('portfolio.html', 'View all projects', 'reveal')
