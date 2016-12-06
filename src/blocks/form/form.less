@@ -52,6 +52,24 @@
     transition: 0;
   }
   
+  &__upload-remove {
+    width: 6rem;
+    height: 7rem;
+    position: absolute;
+    right: -.7rem;
+    top: -.4rem;
+    z-index: 10;
+    background: url(../img/cross.svg) no-repeat;
+    background-size: cover;
+    display: none;
+        
+    @media screen and (max-width: @screen-sm) {
+      background-position: top center;
+      width: 100%;
+      background-size: contain;
+    }
+  }
+  
   &__upload {
     position: absolute;
         
@@ -122,10 +140,15 @@
       align-items: flex-start;
       right: -7.8rem;
       bottom: 9.6rem;
+      cursor: pointer;
         
       @media screen and (max-width: @screen-sm) {
         right: 0;
         bottom: 0;
+      }
+      
+      .form__upload-remove {
+        display: block;
       }
       
       .form__upload-icon {
