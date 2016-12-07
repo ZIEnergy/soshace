@@ -38,6 +38,10 @@
       
       .history__timeline-dot {
         display: none;
+
+        @media screen and (max-width: @screen-lg) {
+          display: block;
+        }
       }
     }
     
@@ -253,6 +257,10 @@
     max-height: 100%;
     left: 50%;
 
+    @media screen and (max-width: @screen-lg) {
+      height: 100%;
+    }
+
     @media screen and (max-width: @screen-sm) {
       display: none!important;
     }
@@ -261,6 +269,11 @@
       height: 0;
       animation: growth 1.5s linear;
       animation-fill-mode: forwards; 
+
+      @media screen and (max-width: @screen-lg) {
+        height: 100%;
+        animation: none;
+      }
     }
     
     &--static {
@@ -282,6 +295,10 @@
     background: @color-third;
     border-radius: 50%;
     z-index: 2;
+
+    @media screen and (max-width: @screen-lg) {
+      display: block;
+    }
 
     @media screen and (max-width: @screen-sm) {
       display: none;

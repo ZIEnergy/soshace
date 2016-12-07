@@ -227,7 +227,6 @@ if ($(window).width() > 1200) {
   sr.reveal('.history__year--two', { 
     duration: 0,
     distance: 0,
-    mobile: false,
     viewFactor: .1,
     afterReveal: function (domEl) {
       $(function() {
@@ -242,14 +241,12 @@ if ($(window).width() > 1200) {
               $myDiv.show();
           }
           if ($('.history__timeline--two').height() < st) {
-  //          $myDiv.addClass('history__timeline--fixed');
             $('.history__timeline--three').find('.history__timeline-dot').fadeIn('fast');
             stMax = $myDiv.height();
             $myDiv = $('.history__timeline--three');
             $myDiv.height(st - stMax);
             console.log('st:'+st, 'stMax: '+stMax);
             if ($('.history__timeline--three').height() < (st - stMax)) {
-  //            $myDiv.addClass('history__timeline--fixed');
               $('.history__timeline--four').find('.history__timeline-dot').fadeIn('fast');
               stMax = stMax + $myDiv.height();
               $myDiv = $('.history__timeline--four');
