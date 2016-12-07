@@ -136,140 +136,153 @@ if ($(window).width() < 1200) {
   });
 }
 
-window.sr = ScrollReveal();
+if ($(window).width() > 1200) {
+  window.sr = ScrollReveal();
 
-sr.reveal('.logo-animated__square', { 
-  origin: 'top',
-  duration: 500,
-  easing: 'linear',
-  distance: '10rem',
-  mobile: false,
-  afterReveal: function (domEl) {
-    $('.logo-animated__square').addClass('logo-animated__square--animated');
-  },
-}, 100);
+  sr.reveal('.logo-animated__square', { 
+    origin: 'top',
+    duration: 500,
+    easing: 'linear',
+    distance: '10rem',
+    mobile: false,
+    afterReveal: function (domEl) {
+      $('.logo-animated__square').addClass('logo-animated__square--animated');
+    },
+  }, 100);
 
-sr.reveal('.main .reveal', { 
-  duration: 1000,
-  easing: 'ease-in-out',
-  mobile: false,
-  distance: '2rem'
-});
+  sr.reveal('.main .reveal', { 
+    duration: 1000,
+    easing: 'ease-in-out',
+    mobile: false,
+    distance: '2rem'
+  });
 
-sr.reveal('.main .form__upload', { 
-  duration: 1000,
-  delay: 500,
-  opacity: 0,
-  mobile: false,
-  easing: 'ease-in-out',
-  distance: '0'
-}, 50);
+  sr.reveal('.main .form__upload', { 
+    duration: 1000,
+    delay: 500,
+    opacity: 0,
+    mobile: false,
+    easing: 'ease-in-out',
+    distance: '0'
+  }, 50);
 
-sr.reveal('.main .portfolio-item', { 
-  duration: 2000,
-  opacity: 0,
-  mobile: false,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
-}, 50);
+  sr.reveal('.main .portfolio-item', { 
+    duration: 2000,
+    opacity: 0,
+    mobile: false,
+    easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+    distance: '10rem'
+  }, 50);
 
-sr.reveal('.main .socials__item', { 
-  duration: 2000,
-  opacity: 0,
-  mobile: false,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
-}, 50);
+  sr.reveal('.main .socials__item', { 
+    duration: 2000,
+    opacity: 0,
+    mobile: false,
+    easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+    distance: '10rem'
+  }, 50);
 
-sr.reveal('.main .about-numbers__content', { 
-  duration: 2000,
-  origin: 'left',
-  delay: 100,
-  opacity: 0,
-  mobile: false,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem'
-}, 50);
+  sr.reveal('.main .about-numbers__content', { 
+    duration: 2000,
+    origin: 'left',
+    delay: 100,
+    opacity: 0,
+    mobile: false,
+    easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+    distance: '10rem'
+  }, 50);
 
-sr.reveal('.services__item', { 
-  duration: 0,
-  viewFactor: 0.5,
-  mobile: false,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem',
-  afterReveal: function (domEl) {
-    $('.services__item-icon').fadeIn('fast');
-  },
-}, 50);
 
-sr.reveal('.history__step', { 
-  origin: 'right',
-  duration: 3000,
-  opacity: 0,
-  mobile: false,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem',
-  viewFactor: 1,
-  mobile: false
-});
+  sr.reveal('.services__item', { 
+    duration: 0,
+    viewFactor: 0.5,
+    easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+    distance: '10rem',
+    afterReveal: function (domEl) {
+      $('.services__item-icon').fadeIn('fast');
+    },
+  }, 50);
 
-sr.reveal('.history__year-content', { 
-  origin: 'left',
-  duration: 3000,
-  opacity: 0,
-  mobile: false,
-  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
-  distance: '10rem',
-  mobile: false
-});
+  sr.reveal('.history__step', { 
+    origin: 'right',
+    duration: 3000,
+    opacity: 0,
+    mobile: false,
+    easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+    distance: '10rem',
+    viewFactor: 1,
+    mobile: false
+  });
 
-sr.reveal('.history__year--two', { 
-  duration: 0,
-  distance: 0,
-  mobile: false,
-  viewFactor: .1,
-  afterReveal: function (domEl) {
-    $(function() {
-      $(window).scroll(function() {
-        var $myDiv = $('.history__timeline--two');
-        var st = $(this).scrollTop();
-        var stMax = 0;
-        $myDiv.height(st);
-        if( st == 0 ) {
-            $myDiv.hide();
-        } else {
-            $myDiv.show();
-        }
-        if ($('.history__timeline--two').height() < st) {
-//          $myDiv.addClass('history__timeline--fixed');
-          $('.history__timeline--three').find('.history__timeline-dot').fadeIn('fast');
-          stMax = $myDiv.height();
-          $myDiv = $('.history__timeline--three');
-          $myDiv.height(st - stMax);
-          console.log('st:'+st, 'stMax: '+stMax);
-          if ($('.history__timeline--three').height() < (st - stMax)) {
-//            $myDiv.addClass('history__timeline--fixed');
-            $('.history__timeline--four').find('.history__timeline-dot').fadeIn('fast');
-            stMax = stMax + $myDiv.height();
-            $myDiv = $('.history__timeline--four');
+  sr.reveal('.history__year-content', { 
+    origin: 'left',
+    duration: 3000,
+    opacity: 0,
+    mobile: false,
+    easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+    distance: '10rem',
+    mobile: false
+  });
+
+  sr.reveal('.history__year--two', { 
+    duration: 0,
+    distance: 0,
+    mobile: false,
+    viewFactor: .1,
+    afterReveal: function (domEl) {
+      $(function() {
+        $(window).scroll(function() {
+          var $myDiv = $('.history__timeline--two');
+          var st = $(this).scrollTop();
+          var stMax = 0;
+          $myDiv.height(st);
+          if( st == 0 ) {
+              $myDiv.hide();
+          } else {
+              $myDiv.show();
+          }
+          if ($('.history__timeline--two').height() < st) {
+  //          $myDiv.addClass('history__timeline--fixed');
+            $('.history__timeline--three').find('.history__timeline-dot').fadeIn('fast');
+            stMax = $myDiv.height();
+            $myDiv = $('.history__timeline--three');
             $myDiv.height(st - stMax);
-            if ($('.history__timeline--four').height() < (st - stMax)) {
-              $(window).unbind('scroll');
+            console.log('st:'+st, 'stMax: '+stMax);
+            if ($('.history__timeline--three').height() < (st - stMax)) {
+  //            $myDiv.addClass('history__timeline--fixed');
+              $('.history__timeline--four').find('.history__timeline-dot').fadeIn('fast');
+              stMax = stMax + $myDiv.height();
+              $myDiv = $('.history__timeline--four');
+              $myDiv.height(st - stMax);
+              if ($('.history__timeline--four').height() < (st - stMax)) {
+                $(window).unbind('scroll');
+              }
+            }
+            else {
+              $('.history__timeline--four').find('.history__timeline-dot').hide();
+              $('.history__timeline--four').height(0);
             }
           }
           else {
-            $('.history__timeline--four').find('.history__timeline-dot').hide();
-            $('.history__timeline--four').height(0);
+            $('.history__timeline--three').find('.history__timeline-dot').hide();
+            $('.history__timeline--three').height(0);
           }
-        }
-        else {
-          $('.history__timeline--three').find('.history__timeline-dot').hide();
-          $('.history__timeline--three').height(0);
-        }
-      }).scroll();
-    });
-  },
-});
+        }).scroll();
+      });
+    },
+  });
+  
+  sr.reveal('.about-numbers__digits', { 
+    duration: '0',
+    distance: '0',
+    afterReveal: function (domEl) {
+      setTimeout(function(){
+        numbersChange();
+      }, 0);
+    },
+  });
+}
+
 
 
 $(function() {
@@ -291,24 +304,6 @@ var numbersChange = function() {
 if ($(window).width() < 1201) {
   numbersChange();
 }
-
-
-
-if ($(window).width() > 1200) {
-  sr.reveal('.about-numbers__digits', { 
-    duration: '0',
-    distance: '0',
-    afterReveal: function (domEl) {
-      setTimeout(function(){
-        numbersChange();
-      }, 0);
-    },
-  });
-}
-
-
-
-
 
 window.odometerOptions = {
   format: 'd',
