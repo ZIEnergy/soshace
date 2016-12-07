@@ -139,13 +139,13 @@ sr.reveal('.logo-animated__square', {
   },
 }, 100);
 
-sr.reveal('.reveal', { 
+sr.reveal('.main .reveal', { 
   duration: 1000,
   easing: 'ease-in-out',
   distance: '2rem'
 });
 
-sr.reveal('.form__upload', { 
+sr.reveal('.main .form__upload', { 
   duration: 1000,
   delay: 500,
   opacity: 0,
@@ -153,14 +153,21 @@ sr.reveal('.form__upload', {
   distance: '0'
 }, 50);
 
-sr.reveal('.portfolio-item', { 
+sr.reveal('.main .portfolio-item', { 
   duration: 2000,
   opacity: 0,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem'
 }, 50);
 
-sr.reveal('.about-numbers__content', { 
+sr.reveal('.main .socials__item', { 
+  duration: 2000,
+  opacity: 0,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
+  distance: '10rem'
+}, 50);
+
+sr.reveal('.main .about-numbers__content', { 
   duration: 2000,
   origin: 'left',
   delay: 100,

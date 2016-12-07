@@ -7,13 +7,13 @@ html(lang='en')
     +header
     .page.employee
       .wrapper
-        a.link-back.employee__link-back.reveal(href="about.html") Back to About Us
-        h1.section-header.section-header--black.employee__name.reveal Stepan Zharychev
-        h2.section-subheader.reveal Full Stack Developer
-        .employee__content.reveal
+        a.link-back.employee__link-back(href="about.html") Back to About Us
+        h1.section-header.section-header--black.employee__name Stepan Zharychev
+        h2.section-subheader Full Stack Developer
+        .employee__content
           img.employee__photo(src="img/teammate-4.jpg", alt="Stepan Zharychev")
           p.employee__dscr Over 4 years of developing experience. Stepan is a bachelor of software development. He works with JavaScript, in particular – with MEAN Stack, React and D3. Stepan participated in building complex web apps, CRM systems and extensions to them, plugins for Google Chrome, etc. Fluent in English.
-        h2.section-subheader.reveal Portfolio
+        h2.section-subheader Portfolio
         .portfolio-list.employee__portfolio
           .portfolio-list__item
             +portfolio-item('portfolio-1.jpg')

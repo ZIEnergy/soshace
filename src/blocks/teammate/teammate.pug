@@ -1,5 +1,5 @@
 mixin teammate(picture, name, occupation, additionalClass)
-  li.teammate.reveal(class=additionalClass)
+  li.teammate(class=additionalClass)
     a.teammate__link(href="employee.html")
       img.teammate__picture(src="img/"+picture, alt="Developer")
       .teammate__content
