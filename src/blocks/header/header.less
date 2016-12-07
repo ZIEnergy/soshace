@@ -5,9 +5,13 @@
   width: 100%;
   z-index: 8;
     
+  @media screen and (max-width: @screen-lg) {
+    padding: 0;
+  }
+    
   @media screen and (max-width: @screen-sm) {
     position: absolute;
-    padding: 2.4rem 0;
+//    padding: 2.4rem 0;
   }
   
   &--active {
@@ -17,16 +21,16 @@
     }
     
     @media screen and (max-width: @screen-sm) and (orientation: landscape) {
-      top: -8.3rem;
+      top: -7.9rem;
     }
     
     .menu {
       height: 100%;
       padding-top: 0;
-      border-top: 8rem solid transparent;
+      border-top: 7.9rem solid transparent;
     
       @media screen and (max-width: @screen-xs) {
-        border-top: 8.3rem solid transparent;
+        border-top: 7.9rem solid transparent;
       }
     
       @media screen and (max-width: @screen-sm) and (orientation: landscape) {
@@ -50,11 +54,11 @@
     justify-content: space-between;
     
     @media screen and (max-width: @screen-lg) {
-      padding: 0 9.4rem 0 4.2rem;
+      padding: 0 9.4rem 0 2rem;
     }
     
     @media screen and (max-width: @screen-xs) {
-      padding: 0 2rem;
+      padding: 0;
     }
   }
   
@@ -76,11 +80,13 @@
     
     @media screen and (max-width: @screen-lg) {
       display: block;
-      width: 2.9rem;
-      height: 2.3rem;
+//      width: 2.9rem;
+//      height: 2.3rem;
+      width: 5.9rem;
+      height: 5.3rem;
       position: fixed;
-      right: 4.4rem;
-      top: 2.9rem;
+      right: 2.9rem;
+      top: 1.4rem;
       transform: rotate(0deg);
       z-index: 20;
       transition: .5s ease-in-out;
@@ -93,8 +99,7 @@
     &--fixed {
       
       .header__menu-button-item {
-        background: #000;
-        opacity: .3;
+        background: #d8d8d8;
       }
     }
     
@@ -103,7 +108,7 @@
       .header__menu-button-item {
         
         &:nth-child(1) {
-          top: 1rem;
+          top: 2.5rem;
           transform: rotate(135deg);
         }
         
@@ -113,7 +118,7 @@
         }
         
         &:nth-child(3) {
-          top: 1rem;
+          top: 2.5rem;
           transform: rotate(-135deg);
         }
       }
@@ -127,20 +132,31 @@
     width: 2.9rem;
     height: .3rem;
     background: #fff;
-    left: 0;
+    left: 1.5rem;
     transform: rotate(0deg);
     transition: .25s ease-in-out;
     
     &:nth-child(1) {
       top: 0;
+    
+      @media screen and (max-width: @screen-lg) {
+        top: 1.5rem;
+      }
     }
     
     &:nth-child(2) {
       top: 1rem;
+    
+      @media screen and (max-width: @screen-lg) {
+        top: 2.5rem;
+      }
     }
     
     &:nth-child(3) {
-      top: 2rem;
+    
+      @media screen and (max-width: @screen-lg) {
+        top: 3.5rem;
+      }
     }
   }
 }

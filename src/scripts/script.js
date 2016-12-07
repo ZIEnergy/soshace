@@ -76,7 +76,16 @@ function reviewSlider() {
   $('.reviews-page__content').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
   });
 }
 
@@ -119,10 +128,10 @@ $('a.button').click(function () {
 if ($(window).width() < 1200) {
   $(document).scroll(function() {
     if($(document).scrollTop() > 29) {
-      $('.menu__button').addClass('menu__button--fixed');
+      $('.header__menu-button').addClass('header__menu-button--fixed');
     }
     else {
-      $('.menu__button').removeClass('menu__button--fixed');
+      $('.header__menu-button').removeClass('header__menu-button--fixed');
     }
   });
 }
@@ -134,6 +143,7 @@ sr.reveal('.logo-animated__square', {
   duration: 500,
   easing: 'linear',
   distance: '10rem',
+  mobile: false,
   afterReveal: function (domEl) {
     $('.logo-animated__square').addClass('logo-animated__square--animated');
   },
@@ -142,6 +152,7 @@ sr.reveal('.logo-animated__square', {
 sr.reveal('.main .reveal', { 
   duration: 1000,
   easing: 'ease-in-out',
+  mobile: false,
   distance: '2rem'
 });
 
@@ -149,6 +160,7 @@ sr.reveal('.main .form__upload', {
   duration: 1000,
   delay: 500,
   opacity: 0,
+  mobile: false,
   easing: 'ease-in-out',
   distance: '0'
 }, 50);
@@ -156,6 +168,7 @@ sr.reveal('.main .form__upload', {
 sr.reveal('.main .portfolio-item', { 
   duration: 2000,
   opacity: 0,
+  mobile: false,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem'
 }, 50);
@@ -163,6 +176,7 @@ sr.reveal('.main .portfolio-item', {
 sr.reveal('.main .socials__item', { 
   duration: 2000,
   opacity: 0,
+  mobile: false,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem'
 }, 50);
@@ -172,6 +186,7 @@ sr.reveal('.main .about-numbers__content', {
   origin: 'left',
   delay: 100,
   opacity: 0,
+  mobile: false,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem'
 }, 50);
@@ -179,6 +194,7 @@ sr.reveal('.main .about-numbers__content', {
 sr.reveal('.services__item', { 
   duration: 0,
   viewFactor: 0.5,
+  mobile: false,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem',
   afterReveal: function (domEl) {
@@ -190,6 +206,7 @@ sr.reveal('.history__step', {
   origin: 'right',
   duration: 3000,
   opacity: 0,
+  mobile: false,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem',
   viewFactor: 1,
@@ -200,6 +217,7 @@ sr.reveal('.history__year-content', {
   origin: 'left',
   duration: 3000,
   opacity: 0,
+  mobile: false,
   easing: 'cubic-bezier(0.19, 1, 0.22, 1)',
   distance: '10rem',
   mobile: false
@@ -208,6 +226,7 @@ sr.reveal('.history__year-content', {
 sr.reveal('.history__year--two', { 
   duration: 0,
   distance: 0,
+  mobile: false,
   viewFactor: .1,
   afterReveal: function (domEl) {
     $(function() {
@@ -262,19 +281,34 @@ $(function() {
   }
 });
 
+var numbersChange = function() {
+  $('.about-numbers__digits--years').html('2');
+  $('.about-numbers__digits--hours').html('7000');
+  $('.about-numbers__digits--customers').html('37');
+  $('.about-numbers__digits--projects').html('83');
+};
 
-sr.reveal('.about-numbers__digits', { 
-  duration: '0',
-  distance: '0',
-  afterReveal: function (domEl) {
-    setTimeout(function(){
-      $('.about-numbers__digits--years').html('2');
-      $('.about-numbers__digits--hours').html('7000');
-      $('.about-numbers__digits--customers').html('37');
-      $('.about-numbers__digits--projects').html('83');
-    }, 0);
-  },
-});
+if ($(window).width() < 1201) {
+  numbersChange();
+}
+
+
+
+if ($(window).width() > 1200) {
+  sr.reveal('.about-numbers__digits', { 
+    duration: '0',
+    distance: '0',
+    afterReveal: function (domEl) {
+      setTimeout(function(){
+        numbersChange();
+      }, 0);
+    },
+  });
+}
+
+
+
+
 
 window.odometerOptions = {
   format: 'd',

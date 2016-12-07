@@ -2,6 +2,11 @@
     width: 30rem;
     height: 8rem;
     position: relative;
+    
+    @media screen and (max-width: @screen-lg) {
+      background: url(../img/logo.png) no-repeat;
+      background-size: cover;
+    }
   
   &__name {
     background: url(../img/logo-name.svg) no-repeat center;
@@ -10,12 +15,20 @@
     z-index: 5;
     width: 100%;
     height: 100%;
+    
+    @media screen and (max-width: @screen-lg) {
+      display: none;
+    }
   }
   
   &__square {
     position: absolute;
     width: 6rem;
     height: 6rem;
+    
+    @media screen and (max-width: @screen-lg) {
+      display: none;
+    }
     
     &--animated {
       
