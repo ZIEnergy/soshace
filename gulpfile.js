@@ -33,7 +33,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('images', function() {
-  gulp.src(['./src/images/*','./src/images/**/*','./src/blocks/**/images/*'])
+  gulp.src(['./src/images/*','./src/images/**/*'])
     .pipe(rename({dirname: ''}))
     .pipe(imagemin({
       progressive: true,
@@ -46,7 +46,8 @@ gulp.task('templates', function () {
   var params = {};
   gulp.src('./src/pages/*.pug')
     .pipe(pug({
-      locals: params
+      locals: params,
+      pretty: true
     }))
     .pipe(gulp.dest('./build'))
     .pipe(browserSync.reload({stream:true}));
