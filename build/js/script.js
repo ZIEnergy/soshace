@@ -125,14 +125,22 @@ $('a.button').click(function () {
   }
 });
 
+var menuButtonColor = function() {
+  if($(document).scrollTop() > 29) {
+    $('.header__menu-button').addClass('header__menu-button--fixed');
+  }
+  else {
+    $('.header__menu-button').removeClass('header__menu-button--fixed');
+  }
+}
+
+if ($(window).width() < 1200) {
+  menuButtonColor();
+}
+
 if ($(window).width() < 1200) {
   $(document).scroll(function() {
-    if($(document).scrollTop() > 29) {
-      $('.header__menu-button').addClass('header__menu-button--fixed');
-    }
-    else {
-      $('.header__menu-button').removeClass('header__menu-button--fixed');
-    }
+    menuButtonColor();
   });
 }
 
