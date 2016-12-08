@@ -73,7 +73,6 @@ gulp.task('scripts:plugins', function () {
 
 gulp.task('scripts', function () {
   gulp.src(['./src/blocks/**/*.js', './src/scripts/script.js'])
-    .pipe(uglify())
     .pipe(concat('script.js'))
     .pipe(insert.wrap('$(document).ready(function(){', '})'))
     .pipe(gulp.dest('./build/js'))
@@ -96,7 +95,6 @@ gulp.task('styles', function () {
     .pipe(autoprefixer({
         browsers: ['last 20 versions']
     }))
-    .pipe(cleanCSS())
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.reload({stream:true}));
 });
